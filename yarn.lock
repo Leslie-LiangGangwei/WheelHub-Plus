@@ -2016,6 +2016,11 @@ vite@^1.0.0-rc.1:
     vue "^3.0.3"
     ws "^7.3.1"
 
+vue-router@4.0.0-beta.3:
+  version "4.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.0-beta.3.tgz#e46f45807023a4b8ce73a143a216b4c9ea3eb243"
+  integrity sha512-3/cg3n46D9MO9u2nvtGE38gMyUxg8sjt6jMeZ6zbi9sRGAL0PaDHuKS+xWlOOLit7abP5MepNlh84t41gxtP8Q==
+
 vue@^3.0.0-rc.1, vue@^3.0.3:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.1.2.tgz#647f8e3949a3d600771dca25d50225dc3e594c64"
