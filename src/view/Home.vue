@@ -1,8 +1,5 @@
 <template>
-  <div class="nav">
-    <div class="logo"></div>
-    <div class="menu"></div>
-  </div>
+  <Nav></Nav>
   <div class="banner">
     <h1>WheelHub-Plus</h1>
     <h2>WheelHub 加强版，基于 Vue 3 开发的前端 UI 框架</h2>
@@ -13,11 +10,13 @@
 </template>
 
 <script>
+import Nav from '../components/Nav.vue'
+
 export default {
-  name: "Home.vue"
+  name: "Home",
+  components: {Nav}
 }
 </script>
 
 <style scoped lang="scss">
-
 </style>

@@ -1,17 +1,17 @@
 <template>
-  <div class="nav">
-    <div class="logo"></div>
-    <div class="menu"></div>
-  </div>
+  <Nav></Nav>
   <div class="doc-content">
     <aside>边栏</aside>
     <main>主内容</main>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Nav from '../components/Nav.vue'
+
 export default {
-  name: "Doc.vue"
+  name: "Doc",
+  components: {Nav}
 }
 </script>
 
