@@ -27,6 +27,8 @@ export default {
 .nav {
   background: pink;
   display: flex;
+  position: relative;
+  z-index: 10;
   padding: 16px;
   > .logo {
     max-width: 6em;
