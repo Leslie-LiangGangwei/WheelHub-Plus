@@ -30,7 +30,16 @@ export default {
   name: "Doc",
   components: {Nav},
   setup: function () {
-    const menuVisible = inject<ref<boolean>>('menuVisible') // get
+    const menuVisible = inject<ref<boolean>>('menuVisible')
+    const width = document.documentElement.clientWidth;
+    const eventMenu = () => {
+      if (width > 576) {
+        return;
+      } else if (menuVisible.value) {
+        menuVisible.value = false
+      }
+    }
+    document.addEventListener('click', eventMenu)
     return {menuVisible}
   }
 }
