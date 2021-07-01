@@ -51,7 +51,7 @@ aside {
   width: 150px;
   padding: 16px;
   position: fixed;
-  top: 54px;
+  top: 64px;
   left: 0;
   > h2 {
     margin-bottom: 4px;
