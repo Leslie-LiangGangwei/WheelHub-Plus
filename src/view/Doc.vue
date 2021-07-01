@@ -1,6 +1,23 @@
 <template>
   <Nav></Nav>
   <div class="doc-content">
+    <aside class="pc">
+      <h2>组件列表</h2>
+      <ol>
+        <li>
+          <router-link to="/doc/swich">Switch 组件</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/button">Button 组件</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/dialog">Dialog 组件</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/tabs">Tabs 组件</router-link>
+        </li>
+      </ol>
+    </aside>
     <aside v-if="menuVisible">
       <h2>组件列表</h2>
       <ol>
@@ -47,6 +64,7 @@ export default {
 
 <style scoped lang="scss">
 aside {
+  display: inline-block;
   background: lightblue;
   width: 150px;
   padding: 16px;
@@ -62,4 +80,12 @@ aside {
     }
   }
 }
+
+@media (max-width: 576px) {
+  .pc {
+    display: none;
+  }
+}
+
+
 </style>
