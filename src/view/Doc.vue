@@ -1,28 +1,11 @@
 <template>
   <Nav></Nav>
   <div class="doc-content">
-    <aside class="pc">
+    <aside :class="{'mobile-show-aside': menuVisible}" ref="aside">
       <h2>组件列表</h2>
       <ol>
         <li>
-          <router-link to="/doc/swich">Switch 组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/button">Button 组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/dialog">Dialog 组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/tabs">Tabs 组件</router-link>
-        </li>
-      </ol>
-    </aside>
-    <aside v-if="menuVisible">
-      <h2>组件列表</h2>
-      <ol>
-        <li>
-          <router-link to="/doc/swich">Switch 组件</router-link>
+          <router-link to="/doc/switch">Switch 组件</router-link>
         </li>
         <li>
           <router-link to="/doc/button">Button 组件</router-link>
@@ -48,16 +31,15 @@ export default {
   components: {Nav},
   setup: function () {
     const menuVisible = inject<ref<boolean>>('menuVisible')
-    const width = document.documentElement.clientWidth;
-    const eventMenu = () => {
-      if (width > 576) {
-        return;
-      } else if (menuVisible.value) {
-        menuVisible.value = false
+    const aside = ref(null);
+    const eventMenu = (event) => {
+      if (event.target == aside.value || aside.value.contains(event.target)) {
+        return
       }
+      menuVisible.value = false
     }
     document.addEventListener('click', eventMenu)
-    return {menuVisible}
+    return {menuVisible, aside}
   }
 }
 </script>
@@ -82,10 +64,11 @@ aside {
 }
 
 @media (max-width: 576px) {
-  .pc {
+  aside {
     display: none;
   }
+  aside.mobile-show-aside {
+    display: inline-block;
+  }
 }
-
-
 </style>
