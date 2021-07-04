@@ -38,14 +38,14 @@ export default {
     const menuVisible = inject<ref<boolean>>('menuVisible')
     const aside = ref(null);
     const eventMenu = (event) => {
-      nextTick(() => {
-        if (event.target == aside.value || aside.value.contains(event.target)) {
-          return
-        }
-        menuVisible.value = false
-      })
+      if (event.target == aside.value || aside.value.contains(event.target)) {
+        return
+      }
+      menuVisible.value = false
     }
-    document.addEventListener('click', eventMenu)
+    nextTick(() => {
+      document.addEventListener('click', eventMenu)
+    })
     return {menuVisible, aside}
   }
 }
