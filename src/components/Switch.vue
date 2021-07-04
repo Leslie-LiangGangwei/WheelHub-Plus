@@ -14,6 +14,36 @@
   <div>我是 switch 文档</div>
   <div>我是 switch 文档</div>
   <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
+  <div>我是 switch 文档</div>
 </template>
 
 <script>
