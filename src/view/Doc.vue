@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import {inject, ref} from "vue";
+import {inject, ref, nextTick} from "vue";
 import Nav from '../components/Nav.vue'
 
 export default {
@@ -33,10 +33,12 @@ export default {
     const menuVisible = inject<ref<boolean>>('menuVisible')
     const aside = ref(null);
     const eventMenu = (event) => {
-      if (event.target == aside.value || aside.value.contains(event.target)) {
-        return
-      }
-      menuVisible.value = false
+      nextTick(() => {
+        if (event.target == aside.value || aside.value.contains(event.target)) {
+          return
+        }
+        menuVisible.value = false
+      })
     }
     document.addEventListener('click', eventMenu)
     return {menuVisible, aside}
