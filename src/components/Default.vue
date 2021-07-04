@@ -1,10 +1,10 @@
 <template>
-  <div>我是 switch 文档</div>
+  <div>这个是默认页面</div>
 </template>
 
 <script>
 export default {
-  name: "Switch"
+  name: "Default"
 }
 </script>
 
