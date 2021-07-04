@@ -27,7 +27,10 @@ export default {
 <style scoped lang="scss">
 .nav {
   background: pink;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
