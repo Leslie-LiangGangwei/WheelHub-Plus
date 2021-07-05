@@ -1,10 +1,21 @@
 <template>
-  <button><span></span></button>
+  <button :class="{switchStatus}" @click="toggleSwitch">
+    <span></span>
+  </button>
 </template>
 
 <script lang="ts">
+import {ref} from "vue";
+
 export default {
-  name: "Switch"
+  name: "Switch",
+  setup() {
+    const switchStatus = ref(false)
+    const toggleSwitch = () => {
+      switchStatus.value = !switchStatus.value
+    }
+    return {switchStatus, toggleSwitch}
+  }
 }
 </script>
 
@@ -16,9 +27,17 @@ button {
   height: $h;
   width: $h*2;
   border: none;
-  background: blue;
+  background: grey;
   border-radius: $h/2;
   outline: none;
+}
+
+button.switchStatus {
+  background: blue;
+}
+
+button.switchStatus span {
+  left: calc(100% - #{$h2} - 2px);
 }
 
 span {
