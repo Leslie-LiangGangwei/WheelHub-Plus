@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "Default"
+  name: "DefaultDoc"
 }
 </script>
 
