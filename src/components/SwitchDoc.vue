@@ -1,6 +1,6 @@
 <template>
   <div>我是 switch 文档</div>
-  <Switch :value="switchValue" @input="switchValue = $event"></Switch>
+  <Switch v-model:value="switchValue"></Switch>
   <p>{{switchValue}}</p>
 </template>
 
