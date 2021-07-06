@@ -1,20 +1,20 @@
 <template>
-  <button :class="{switchStatus}" @click="toggleSwitch">
+  <button :class="{switchStatus: value}" @click="toggleSwitch">
     <span></span>
   </button>
 </template>
 
 <script lang="ts">
-import {ref} from "vue";
-
 export default {
   name: "Switch",
-  setup() {
-    const switchStatus = ref(false)
+  props: {
+    value: [Boolean, String]
+  },
+  setup(props, context) {
     const toggleSwitch = () => {
-      switchStatus.value = !switchStatus.value
+      context.emit('input', !props.value)
     }
-    return {switchStatus, toggleSwitch}
+    return {toggleSwitch}
   }
 }
 </script>
