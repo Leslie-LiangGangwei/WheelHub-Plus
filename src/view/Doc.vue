@@ -74,13 +74,11 @@ export default {
 
 aside {
   display: inline-block;
-  position: fixed;
-  top: 64px;
-  left: 0;
-  height: 100%;
-  width: 150px;
+  position: fixed; top: 64px; left: 0;
+  height: 100%; width: 150px;
   padding: 16px;
   background: lightblue;
+  z-index: 30;
   h2 {
     margin-bottom: 4px;
   }
