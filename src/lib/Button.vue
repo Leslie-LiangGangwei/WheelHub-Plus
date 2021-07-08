@@ -5,6 +5,8 @@
 </template>
 
 <script lang="ts">
+import './g.scss'
+
 export default {
   name: "Button",
   props: {
