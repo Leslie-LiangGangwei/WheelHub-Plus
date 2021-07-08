@@ -1,5 +1,4 @@
 <template>
-  <div>我是 switch 文档</div>
   <Switch v-model:value="switchValue"></Switch>
   <p>{{switchValue}}</p>
 </template>
