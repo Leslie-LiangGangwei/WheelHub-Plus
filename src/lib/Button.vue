@@ -1,11 +1,12 @@
 <template>
-  <button class="g-button" :class="`g-theme-${theme}`">
+  <button class="g-button" :class="classes">
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts">
 import './g.scss'
+import {computed} from 'vue'
 
 export default {
   name: "Button",
@@ -13,7 +14,21 @@ export default {
     theme: {
       type: String,
       default: 'button'
-    }
+    },
+    size: {
+      type: String,
+      default: "normal",
+    },
+  },
+  setup(props) {
+    const classes = computed(() => {
+      const {theme, size} = props;
+      return {
+        [`g-theme-${theme}`]: theme,
+        [`g-size-${size}`]: size
+      }
+    })
+    return {classes}
   }
 }
 </script>
@@ -49,6 +64,34 @@ $font-size: 14px;
   }
   &::-moz-focus-inner {
     border: 0;
+  }
+  &.g-theme-text {
+    border-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    &:hover,
+    &:focus {
+      background: darken(white, 5%);;
+    }
+  }
+  &.g-theme-link {
+    border-color: transparent;
+    box-shadow: none;
+    color: $blue;
+    &:hover,
+    &:focus {
+      color: lighten($blue, 10%);
+    }
+  }
+  &.g-size-big {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px
+  }
+  &.g-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
   }
 }
 </style>
