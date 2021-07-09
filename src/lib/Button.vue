@@ -1,5 +1,6 @@
 <template>
   <button class="g-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="g-loadingIndicator"></span>
     <slot></slot>
   </button>
 </template>
@@ -24,6 +25,10 @@ export default {
       default: "normal"
     },
     disabled: {
+      type: [Boolean, String],
+      default: false,
+    },
+    loading: {
       type: [Boolean, String],
       default: false,
     },
@@ -166,5 +171,21 @@ $font-size: 14px;
       color: $grey;
     }
   }
+  .g-loadingIndicator {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: g-spin 1s infinite linear;
+  }
+}
+
+@keyframes g-spin {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
 }
 </style>

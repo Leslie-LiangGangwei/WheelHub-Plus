@@ -39,19 +39,38 @@
     <Button theme="text" disabled>文字按钮</Button>
     <Button theme="link" disabled>链接按钮</Button>
   </div>
+  <div>
+    <p>示例五</p>
+    <div class="g-div">
+      <Button loading>提交中</Button>
+      <Button @click="onClick" :loading="buttonLoading">点击提交</Button>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
 import Button from '../lib/Button.vue'
+import {ref} from 'vue'
 
 export default {
   name: "ButtonDoc",
-  components: {Button}
+  components: {Button},
+  setup() {
+    const buttonLoading = ref(false)
+    const onClick = () => {
+      buttonLoading.value = !buttonLoading.value
+    }
+    return {buttonLoading, onClick}
+  }
 }
 </script>
 
 <style scoped lang="scss">
 p {
   margin: 20px 0;
+}
+
+.g-div {
+  display: flex;
 }
 </style>
