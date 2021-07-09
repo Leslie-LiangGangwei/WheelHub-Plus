@@ -19,13 +19,18 @@ export default {
       type: String,
       default: "normal",
     },
+    level: {
+      type: String,
+      default: "normal"
+    }
   },
   setup(props) {
     const classes = computed(() => {
-      const {theme, size} = props;
+      const {theme, size, level} = props;
       return {
         [`g-theme-${theme}`]: theme,
-        [`g-size-${size}`]: size
+        [`g-size-${size}`]: size,
+        [`g-level-${level}`]: level
       }
     })
     return {classes}
@@ -38,6 +43,7 @@ $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
 $blue: #40a9ff;
+$red: red;
 $radius: 4px;
 $font-size: 14px;
 .g-button {
@@ -92,6 +98,53 @@ $font-size: 14px;
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
+  }
+  &.g-theme-button {
+    &.g-level-main {
+      background: $blue;
+      color: white;
+      border-color: $blue;
+      &:hover,
+      &:focus {
+        background: darken($blue, 10%);
+        border-color: darken($blue, 10%);
+      }
+    }
+    &.g-level-danger {
+      background: $red;
+      border-color: $red;
+      color: white;
+      &:hover,
+      &:focus {
+        background: darken($red, 10%);
+        border-color: darken($red, 10%);
+      }
+    }
+  }
+  &.g-theme-link {
+    &.g-level-danger {
+      color: $red;
+      &:hover,
+      &:focus {
+        color: darken($red, 10%);
+      }
+    }
+  }
+  &.g-theme-text {
+    &.g-level-main {
+      color: $blue;
+      &:hover,
+      &:focus {
+        color: darken($blue, 10%);
+      }
+    }
+    &.g-level-danger {
+      color: $red;
+      &:hover,
+      &:focus {
+        color: darken($red, 10%);
+      }
+    }
   }
 }
 </style>
