@@ -1,5 +1,5 @@
 <template>
-  <button class="g-button" :class="classes">
+  <button class="g-button" :class="classes" :disabled="disabled">
     <slot></slot>
   </button>
 </template>
@@ -22,7 +22,11 @@ export default {
     level: {
       type: String,
       default: "normal"
-    }
+    },
+    disabled: {
+      type: [Boolean, String],
+      default: false,
+    },
   },
   setup(props) {
     const classes = computed(() => {
@@ -44,6 +48,7 @@ $border-color: #d9d9d9;
 $color: #333;
 $blue: #40a9ff;
 $red: red;
+$grey: grey;
 $radius: 4px;
 $font-size: 14px;
 .g-button {
@@ -144,6 +149,21 @@ $font-size: 14px;
       &:focus {
         color: darken($red, 10%);
       }
+    }
+  }
+  &.g-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.g-theme-link, &.g-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
     }
   }
 }
