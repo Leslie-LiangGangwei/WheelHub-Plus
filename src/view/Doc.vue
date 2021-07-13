@@ -78,7 +78,7 @@ aside {
   height: 100%; width: 150px;
   padding: 16px;
   background: lightblue;
-  z-index: 30;
+  z-index: 10;
   h2 {
     margin-bottom: 4px;
   }
