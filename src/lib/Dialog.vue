@@ -1,21 +1,21 @@
 <template>
   <template v-if="visible">
-  <div class="g-dialog-overlay"></div>
-  <div class="g-dialog-wrapper">
-    <div class="g-dialog">
-      <header>标题
-        <span class="g-dialog-close"></span>
-      </header>
-      <main>
-        <p>第一行</p>
-        <p>第二行</p>
-      </main>
-      <footer>
-        <Button level="main">yes</Button>
-        <Button>Cancel</Button>
-      </footer>
+    <div class="g-dialog-overlay" @click="overlayClose"></div>
+    <div class="g-dialog-wrapper">
+      <div class="g-dialog">
+        <header>标题
+          <span class="g-dialog-close" @click="closeDialog"></span>
+        </header>
+        <main>
+          <p>第一行</p>
+          <p>第二行</p>
+        </main>
+        <footer>
+          <Button level="main" @click="ok">yes</Button>
+          <Button @click="cancel">Cancel</Button>
+        </footer>
+      </div>
     </div>
-  </div>
   </template>
 </template>
 
@@ -30,7 +30,38 @@ export default {
     visible: {
       type: Boolean,
       default: false
+    },
+    onClickOverlay: {
+      type: [Boolean, String],
+      default: true
+    },
+    ok: {
+      type: Function
+    },
+    cancel: {
+      type: Function
     }
+  },
+  setup(props, context) {
+    const closeDialog = () => {
+      context.emit('update:visible', false)
+    }
+    const overlayClose = () => {
+      if (props.onClickOverlay) {
+        closeDialog()
+      }
+    }
+    const ok = () => {
+      if (props.ok && props.ok() !== false) {
+        closeDialog()
+      }
+    }
+    const cancel = () => {
+      if (props.cancel && props.cancel() !== false) {
+        closeDialog()
+      }
+    }
+    return {closeDialog, overlayClose, ok, cancel}
   }
 }
 </script>

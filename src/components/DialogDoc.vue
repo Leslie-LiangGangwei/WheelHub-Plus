@@ -1,6 +1,11 @@
 <template>
   <Button @click="toggle">Dialog</Button>
-  <Dialog :visible="dialogStatus"></Dialog>
+  <Dialog
+      v-model:visible="dialogStatus"
+      :onClickOverlay="false"
+      :ok="okFunction"
+      :cancel="cancelFunction"
+  ></Dialog>
 </template>
 
 <script lang="ts">
@@ -13,10 +18,13 @@ export default {
   components: {Button, Dialog},
   setup() {
     const dialogStatus = ref(false)
+    const onClickOverlay = ref(false)
+    const okFunction = () => {}
+    const cancelFunction = () => {}
     const toggle = () => {
       dialogStatus.value = !dialogStatus.value
     }
-    return {dialogStatus, toggle}
+    return {dialogStatus, onClickOverlay, toggle, okFunction, cancelFunction}
   }
 }
 </script>
