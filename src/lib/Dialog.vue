@@ -1,4 +1,5 @@
 <template>
+  <template v-if="visible">
   <div class="g-dialog-overlay"></div>
   <div class="g-dialog-wrapper">
     <div class="g-dialog">
@@ -15,6 +16,7 @@
       </footer>
     </div>
   </div>
+  </template>
 </template>
 
 <script lang="ts">
@@ -23,7 +25,13 @@ import Button from '../lib/Button.vue'
 
 export default {
   name: "Dialog",
-  components: {Button}
+  components: {Button},
+  props: {
+    visible: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 

@@ -1,14 +1,23 @@
 <template>
-  <div>我是 Dialog 文档</div>
-  <Dialog></Dialog>
+  <Button @click="toggle">Dialog</Button>
+  <Dialog :visible="dialogStatus"></Dialog>
 </template>
 
 <script lang="ts">
+import {ref} from 'vue'
 import Dialog from '../lib/Dialog.vue'
+import Button from '../lib/Button.vue'
 
 export default {
   name: "DialogDoc",
-  components: {Dialog}
+  components: {Button, Dialog},
+  setup() {
+    const dialogStatus = ref(false)
+    const toggle = () => {
+      dialogStatus.value = !dialogStatus.value
+    }
+    return {dialogStatus, toggle}
+  }
 }
 </script>
 
