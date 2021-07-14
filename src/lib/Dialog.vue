@@ -3,12 +3,12 @@
     <div class="g-dialog-overlay" @click="overlayClose"></div>
     <div class="g-dialog-wrapper">
       <div class="g-dialog">
-        <header>标题
+        <header>
+          <slot name="title"></slot>
           <span class="g-dialog-close" @click="closeDialog"></span>
         </header>
         <main>
-          <p>第一行</p>
-          <p>第二行</p>
+          <slot name="content"></slot>
         </main>
         <footer>
           <Button level="main" @click="ok">yes</Button>
