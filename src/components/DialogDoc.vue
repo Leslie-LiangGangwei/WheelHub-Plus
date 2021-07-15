@@ -14,12 +14,15 @@
       <div>hi2</div>
     </template>
   </Dialog>
+  <p>---</p>
+  <Button @click="showDialog">show</Button>
 </template>
 
 <script lang="ts">
 import {ref} from 'vue'
 import Dialog from '../lib/Dialog.vue'
 import Button from '../lib/Button.vue'
+import { openDialog } from "../lib/openDialog";
 
 export default {
   name: "DialogDoc",
@@ -32,7 +35,16 @@ export default {
     const toggle = () => {
       dialogStatus.value = !dialogStatus.value
     }
-    return {dialogStatus, onClickOverlay, toggle, okFunction, cancelFunction}
+    // 使用 openDialog 方法 render Dialog
+    const showDialog = () => {
+      openDialog({
+        title: '标题',
+        content: 'Hello World',
+        ok: ()=>{},
+        cancel: ()=>{},
+      })
+    }
+    return {dialogStatus, onClickOverlay, toggle, okFunction, cancelFunction, showDialog}
   }
 }
 </script>
