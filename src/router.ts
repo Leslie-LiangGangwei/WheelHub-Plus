@@ -3,7 +3,7 @@ import Home from './view/Home.vue'
 import Switch from './components/SwitchDoc.vue'
 import Button from './components/ButtonDoc.vue'
 import Dialog from './components/DialogDoc.vue'
-import Tabs from './components/Tabs.vue'
+import Tabs from './components/TabsDoc.vue'
 import Default from './components/DefaultDoc.vue'
 import {createWebHashHistory, createRouter} from 'vue-router'
 
