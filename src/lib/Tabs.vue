@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div v-for="(t, index) in titles" :key="index">{{t}}</div>
-    <component v-for="(d, index) in defaults" :is="d" :key="index"></component>
-  </div>
+  <div v-for="(t, index) in titles" :key="index">{{ t }}</div>
+  <component v-for="(d, index) in defaults" :is="d" :key="index"></component>
 </template>
 
 <script lang="ts">

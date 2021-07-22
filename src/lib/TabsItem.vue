@@ -4,7 +4,8 @@
 
 <script lang="ts">
 export default {
-  name: "TabsItem"
+  name: "TabsItem",
+  inheritAttrs: false
 }
 </script>
 
