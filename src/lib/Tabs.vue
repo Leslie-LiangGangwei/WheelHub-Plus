@@ -1,7 +1,12 @@
 <template>
   <div class="g-tabs">
     <div class="g-tabs-nav">
-      <div class="g-tabs-nav-item" v-for="(t, index) in titles" :key="index">{{ t }}</div>
+      <div class="g-tabs-nav-item"
+           v-for="(t, index) in titles"
+           :class="{selected: selected === t}"
+           @click="switchItem(t)"
+           :key="index">{{ t }}
+      </div>
     </div>
     <div class="g-tabs-content">
       <div class="g-tabs-content-item">
@@ -16,6 +21,9 @@ import TabsItem from './TabsItem.vue'
 
 export default {
   name: "Tabs",
+  props: {
+    selected: {type: String}
+  },
   setup: function (props, context) {
     // @ts-ignore
     const defaults = context.slots.default()
@@ -28,7 +36,10 @@ export default {
       // @ts-ignore
       return tag.props.title
     })
-    return {defaults, titles}
+    const switchItem = (title) => {
+      context.emit('update:selected', title)
+    }
+    return {defaults, titles, switchItem}
   }
 }
 </script>
