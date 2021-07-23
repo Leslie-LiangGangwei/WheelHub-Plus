@@ -1,5 +1,4 @@
 <template>
-  <p>示例一</p>
   <Tabs>
     <TabsItem title="Title 1">panel 1</TabsItem>
     <TabsItem title="Title 2">panel 2</TabsItem>
