@@ -7,9 +7,10 @@
            @click="switchItem(t)"
            :key="index">{{ t }}
       </div>
+      <div class="g-tabs-nav-indicator"></div>
     </div>
     <div class="g-tabs-content">
-        <component :is="tabsContent" :key="tabsContent"></component>
+      <component :is="tabsContent" :key="tabsContent"></component>
     </div>
   </div>
 </template>
@@ -38,7 +39,7 @@ export default {
     const switchItem = (title) => {
       context.emit('update:selected', title)
     }
-    const tabsContent = computed(()=>{
+    const tabsContent = computed(() => {
       return defaults.find(tag => tag.props.title === props.selected)
     })
     return {defaults, titles, switchItem, tabsContent}
@@ -54,6 +55,7 @@ $border-color: #d9d9d9;
 .g-tabs {
   &-nav {
     display: flex;
+    position: relative;
     color: $color;
     border-bottom: 1px solid $border-color;
     &-item {
@@ -66,6 +68,12 @@ $border-color: #d9d9d9;
       &.selected {
         color: $blue;
       }
+    }
+    &-indicator {
+      position: absolute;
+      bottom: -1px; left: 0;
+      height: 3px; width: 100px;
+      background: $blue;
     }
   }
   &-content {
