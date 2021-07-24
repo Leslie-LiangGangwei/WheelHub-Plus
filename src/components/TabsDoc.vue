@@ -14,7 +14,7 @@ export default {
   name: "TabsDoc",
   components: {Tabs, TabsItem},
   setup(){
-    const itemSelected = ref('Title 1')
+    const itemSelected = ref('Title 2')
     return { itemSelected }
   }
 }
