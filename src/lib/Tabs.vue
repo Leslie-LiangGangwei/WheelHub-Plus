@@ -9,14 +9,13 @@
       </div>
     </div>
     <div class="g-tabs-content">
-      <div class="g-tabs-content-item">
-        <component v-for="(d, index) in defaults" :is="d" :key="index"></component>
-      </div>
+        <component :is="tabsContent" :key="tabsContent"></component>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import {computed} from 'vue'
 import TabsItem from './TabsItem.vue'
 
 export default {
@@ -39,7 +38,10 @@ export default {
     const switchItem = (title) => {
       context.emit('update:selected', title)
     }
-    return {defaults, titles, switchItem}
+    const tabsContent = computed(()=>{
+      return defaults.find(tag => tag.props.title === props.selected)
+    })
+    return {defaults, titles, switchItem, tabsContent}
   }
 }
 </script>
