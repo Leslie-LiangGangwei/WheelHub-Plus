@@ -1,12 +1,12 @@
 <template>
   <div class="g-tabs">
     <div class="g-tabs-nav" ref="container">
-      <div class="g-tabs-nav-item"
-           v-for="(t, index) in titles"
-           :class="{selected: selected === t}"
-           @click="switchItem(t)"
-           :ref="(el) => navItem[index] = el"
+      <div v-for="(t, index) in titles"
            :key="index"
+           :ref="(el) => { if(t === selected) selectItem = el}"
+           :class="{selected: selected === t}"
+           class="g-tabs-nav-item"
+           @click="switchItem(t)"
       >{{ t }}
       </div>
       <div class="g-tabs-nav-indicator" ref="indicator"></div>
@@ -26,14 +26,15 @@ export default {
   props: {
     selected: {type: String}
   },
-  setup: function (props, context) {
-    const navItem = ref<HTMLElement[]>([])
-    const container = ref<HTMLElement[]>(null)
-    const indicator = ref<HTMLElement[]>(null)
+  setup(props, context) {
+    const selectItem = ref<HTMLDivElement>(null)
+    const container = ref<HTMLDivElement>(null)
+    const indicator = ref<HTMLDivElement>(null)
     const x = () => {
-      const selectItem = navItem.value.find(div => div.classList.contains('selected'))
-      const {width} = selectItem.getBoundingClientRect()
-      const {left: selectItemLeft} = selectItem.getBoundingClientRect()
+      // @ts-ignore
+      const {width} = selectItem.value.getBoundingClientRect()
+      // @ts-ignore
+      const {left: selectItemLeft} = selectItem.value.getBoundingClientRect()
       // @ts-ignore
       const {left: containerItemLeft} = container.value.getBoundingClientRect()
       const left = selectItemLeft - containerItemLeft
@@ -61,8 +62,7 @@ export default {
     const tabsContent = computed(() => {
       return defaults.find(tag => tag.props.title === props.selected)
     })
-
-    return {defaults, titles, switchItem, tabsContent, navItem, container, indicator}
+    return {defaults, titles, switchItem, tabsContent, selectItem, container, indicator}
   }
 }
 </script>
