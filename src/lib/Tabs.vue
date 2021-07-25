@@ -27,19 +27,6 @@ export default {
     selected: {type: String}
   },
   setup(props, context) {
-    const selectItem = ref<HTMLDivElement>(null)
-    const container = ref<HTMLDivElement>(null)
-    const indicator = ref<HTMLDivElement>(null)
-    onMounted(() => {
-      watchEffect(() => {
-        const {width} = selectItem.value.getBoundingClientRect()
-        const {left: selectItemLeft} = selectItem.value.getBoundingClientRect()
-        const {left: containerItemLeft} = container.value.getBoundingClientRect()
-        const left = selectItemLeft - containerItemLeft
-        indicator.value.style.width = width + 'px'
-        indicator.value.style.left = left + 'px'
-      })
-    })
     const defaults = context.slots.default()
     defaults.forEach((tag) => {
       if (tag.type.name !== 'TabsItem') {
@@ -55,6 +42,20 @@ export default {
     }
     const tabsContent = computed(() => {
       return defaults.find(tag => tag.props.title === props.selected)
+    })
+    const selectItem = ref<HTMLDivElement>(null)
+
+    const container = ref<HTMLDivElement>(null)
+    const indicator = ref<HTMLDivElement>(null)
+    onMounted(() => {
+      watchEffect(() => {
+        const {width} = selectItem.value.getBoundingClientRect()
+        const {left: selectItemLeft} = selectItem.value.getBoundingClientRect()
+        const {left: containerItemLeft} = container.value.getBoundingClientRect()
+        const left = selectItemLeft - containerItemLeft
+        indicator.value.style.width = width + 'px'
+        indicator.value.style.left = left + 'px'
+      })
     })
     return {defaults, titles, switchItem, tabsContent, selectItem, container, indicator}
   }
