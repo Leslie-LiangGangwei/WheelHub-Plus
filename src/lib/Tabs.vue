@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import {computed, ref, onMounted, onUpdated} from 'vue'
+import {computed, ref, onMounted, watchEffect} from 'vue'
 import TabsItem from './TabsItem.vue'
 
 export default {
@@ -30,22 +30,16 @@ export default {
     const selectItem = ref<HTMLDivElement>(null)
     const container = ref<HTMLDivElement>(null)
     const indicator = ref<HTMLDivElement>(null)
-    const x = () => {
-      // @ts-ignore
-      const {width} = selectItem.value.getBoundingClientRect()
-      // @ts-ignore
-      const {left: selectItemLeft} = selectItem.value.getBoundingClientRect()
-      // @ts-ignore
-      const {left: containerItemLeft} = container.value.getBoundingClientRect()
-      const left = selectItemLeft - containerItemLeft
-      // @ts-ignore
-      indicator.value.style.width = width + 'px'
-      // @ts-ignore
-      indicator.value.style.left = left + 'px'
-    }
-    onMounted(x)
-    onUpdated(x)
-    // @ts-ignore
+    onMounted(() => {
+      watchEffect(() => {
+        const {width} = selectItem.value.getBoundingClientRect()
+        const {left: selectItemLeft} = selectItem.value.getBoundingClientRect()
+        const {left: containerItemLeft} = container.value.getBoundingClientRect()
+        const left = selectItemLeft - containerItemLeft
+        indicator.value.style.width = width + 'px'
+        indicator.value.style.left = left + 'px'
+      })
+    })
     const defaults = context.slots.default()
     defaults.forEach((tag) => {
       if (tag.type.name !== 'TabsItem') {
