@@ -26,15 +26,12 @@ export default {
 
 <style scoped lang="scss">
 .nav {
-  background: pink;
+  z-index: 10;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
+  justify-content: center; align-items: center;
   padding: 16px;
   height: 64px;
   > .toggleAside {
