@@ -1,10 +1,14 @@
 <template>
   <div class="nav">
     <span class="toggleAside" @click.stop="toggleMenu"></span>
-    <div class="logo">Logo</div>
+    <img class="nav-logo" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <router-link to="/doc">文档</router-link>
+      </li>
+      <li>
+        <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">GitHub</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -25,6 +29,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$black-color: #252525;
+$blue: #2973f5;
+
 .nav {
   z-index: 10;
   position: fixed;
@@ -32,9 +39,9 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center; align-items: center;
-  padding: 16px;
+  padding: 24px;
   height: 64px;
-  > .toggleAside {
+  .toggleAside {
     position: absolute;
     left: 16px;
     top: 50%;
@@ -44,26 +51,37 @@ export default {
     background: red;
     display: none;
   }
-  > .logo {
-    max-width: 6em;
+  .nav-logo {
+    max-width: 8em;
     margin-right: auto;
   }
-  > .menu {
+  .menu {
     display: flex;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    > li {
+    white-space: nowrap; flex-wrap: nowrap;
+    li {
+      display: flex;
+      justify-content: center; align-items: center;
+      color: $black-color;
+      font-size: 16px;
+      height: 32px;
       margin: 0 1em;
+      a {
+        color: $black-color;
+        text-decoration: none;
+        &:hover {
+          color: $blue;
+        }
+      }
     }
   }
   @media (max-width: 576px) {
-    > .menu {
+    .menu {
       display: none;
     }
-    > .logo {
+    .logo {
       margin: 0 auto;
     }
-    > .toggleAside {
+    .toggleAside {
       display: inline-block;
     }
   }

@@ -19,23 +19,28 @@
       </ol>
     </aside>
     <div class="banner">
-      <h1>WheelHub-Plus</h1>
-      <h2>WheelHub 加强版，基于 Vue 3 开发的前端 UI 框架</h2>
-      <p class="actions">
-        <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">GitHub</a>
-        <router-link to="/doc">开始</router-link>
-      </p>
+      <img class="banner-title" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
+      <p class="home-banner-content">WheelHub-Plus，基于 Vue 3 开发的前端 UI 框架</p>
+      <div class="actions">
+        <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">
+          <Button level="main">GitHub</Button>
+        </a>
+        <router-link to="/doc">
+          <Button level="primary">开始</Button>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Nav from "../components/Nav.vue"
+import Button from "../lib/Button.vue"
 import {inject, nextTick, ref} from "vue";
 
 export default {
   name: "Home",
-  components: {Nav},
+  components: {Nav, Button},
   setup: function () {
     const menuVisible = inject<ref<boolean>>('menuVisible')
     const aside = ref(null);
@@ -54,49 +59,57 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$black-color: #252525;
+
 .top {
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
-  
+  background: linear-gradient(130deg, rgba(243, 249, 254, 1) 0%, rgba(239, 247, 252, 1) 100%);
   .banner {
-    padding: 100px 0;
+    padding-top: 120px;
+    padding-bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    > .actions {
+    .banner-title {
+      width: 500px;
+    }
+    .home-banner-content {
+      margin-top: 40px;
+      font-weight: lighter;
+      color: $black-color;
+    }
+    .actions {
+      margin-top: 24px;
       padding: 8px 0;
       a {
+        text-decoration: none;
         margin: 0 8px;
-        background: #fff;
-        display: inline-block;
-        $h: 28px;
-        height: $h;
-        line-height: $h;
-        border-radius: $h/2;
-        padding: 0 8px;
-      }
-    }
-  }
-
-  aside {
-    display: none;
-    position: fixed;
-    top: 64px;
-    left: 0;
-    height: 100%;
-    width: 150px;
-    padding: 16px;
-    background: lightblue;
-    h2 {
-      margin-bottom: 4px;
-    }
-    ol {
-      li {
-        padding: 4px 0;
+        color: $black-color;
       }
     }
   }
 }
+
+
+aside {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  height: 100%;
+  width: 150px;
+  padding: 16px;
+  background: lightblue;
+  h2 {
+    margin-bottom: 4px;
+  }
+  ol {
+    li {
+      padding: 4px 0;
+    }
+  }
+}
+
 
 @media (max-width: 576px) {
   aside.mobile-show-aside {
