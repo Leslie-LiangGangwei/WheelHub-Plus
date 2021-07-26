@@ -22,6 +22,7 @@
   <div>
     <p>示例三</p>
     <Button level="main">重要按钮</Button>
+    <Button level="primary">次重要按钮</Button>
     <Button>普通按钮</Button>
     <Button level="danger">危险按钮</Button>
     <p></p>
