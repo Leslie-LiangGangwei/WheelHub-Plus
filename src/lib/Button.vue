@@ -48,19 +48,19 @@ export default {
 </script>
 
 <style lang="scss">
-$h: 32px;
+$h: 40px;
 $border-color: #d9d9d9;
 $color: #333;
-$blue: #40a9ff;
+$blue: #2973f5;
 $red: red;
 $grey: grey;
 $radius: 4px;
-$font-size: 14px;
+$font-size: 16px;
 .g-button {
   display: inline-flex; justify-content: center; align-items: center;
   box-sizing: border-box;
   height: $h;
-  padding: 0 12px;
+  padding: 8px 24px;
   cursor: pointer;
   white-space: nowrap;
   background: white;
@@ -117,6 +117,16 @@ $font-size: 14px;
       &:hover,
       &:focus {
         background: darken($blue, 10%);
+        border-color: darken($blue, 10%);
+      }
+    }
+    &.g-level-primary {
+      background: white;
+      color: $blue;
+      border-color: $blue;
+      &:hover,
+      &:focus {
+        color: darken($blue, 10%);
         border-color: darken($blue, 10%);
       }
     }
