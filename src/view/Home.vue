@@ -1,5 +1,5 @@
 <template>
-  <div class="top">
+  <div class="home">
     <Nav></Nav>
     <aside :class="{'mobile-show-aside': menuVisible}" ref="aside">
       <h2>组件列表</h2>
@@ -18,21 +18,34 @@
         </li>
       </ol>
     </aside>
-    <div class="banner">
-      <img class="banner-title" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
-      <p class="home-banner-content">WheelHub-Plus，基于 Vue 3.0 开发的前端 UI 框架</p>
-      <div class="actions">
-        <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">
-          <Button level="main">GitHub</Button>
-        </a>
-        <router-link to="/doc">
-          <Button level="primary">开始</Button>
-        </router-link>
+    <div class="home-banner"></div>
+    <div class="main">
+      <div class="banner">
+        <img class="banner-title" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
+        <p class="home-banner-content">WheelHub-Plus，基于 Vue 3.0 开发的前端 UI 框架</p>
+        <div class="actions">
+          <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">
+            <Button level="main">GitHub</Button>
+          </a>
+          <router-link to="/doc">
+            <Button level="primary">开始</Button>
+          </router-link>
+        </div>
       </div>
-    </div>
-    <div class="features">
-      <div class="feature"></div>
-      <div class="feature"></div>
+      <div class="features">
+        <div class="feature">
+          <h2>基于 Vue 3.0</h2>
+          <p>使用了 Vue 3.0 Composition API 所开发的前端 UI 框架，项目仅供学习参考（请勿在生产环境中使用）</p>
+        </div>
+        <div class="feature">
+          <h2>基于 TypeScript</h2>
+          <p>TypeScript 是 JavaScript 的超集，这意味着他支持所有的 JavaScript 语法。并在此之上对 JavaScript 添加了一些扩展。</p>
+        </div>
+        <div class="feature">
+          <h2>代码易读</h2>
+          <p>每个组件的源代码都极其简洁，清晰易懂。自带说明的代码，即使没有注释，你也能看懂</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -63,45 +76,66 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$black-color: #252525;
 
-.top {
-  display: flex; justify-content: center; align-items: center;
-  background: linear-gradient(130deg, rgba(243, 249, 254, 1) 0%, rgba(239, 247, 252, 1) 100%);
-  .banner {
-    display: flex; justify-content: center; align-items: center; flex-direction: column;
+.home {
+  position: relative;
+  .home-banner {
+    z-index: 1;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 466px;
+    background: linear-gradient(130deg, rgba(243, 249, 254, 1) 0%, rgba(239, 247, 252, 1) 100%);
+  }
+  .main {
     max-width: 960px;
-    padding-top: 130px;
-    padding-bottom: 80px;
-    .banner-title {
-      width: 500px;
-      margin: 0 32px;
-    }
-    .home-banner-content {
-      margin-top: 24px;
-      font-weight: lighter;
-      color: $black-color;
-    }
-    .actions {
-      margin-top: 40px;
-      padding: 8px 0;
-      a {
-        text-decoration: none;
-        margin: 0 8px;
-        color: $black-color;
+    margin: 0 auto; padding: 3.6rem 2rem 0;
+    .banner {
+      display: flex; justify-content: center; align-items: center; flex-direction: column;
+      padding-top: 130px; padding-bottom: 80px;
+      .banner-title {
+        z-index: 10;
+        max-width: 500px;
+        margin: 0 32px;
+      }
+      .home-banner-content {
+        z-index: 10;
+        margin-top: 24px;
+        font-weight: lighter;
+      }
+      .actions {
+        z-index: 10;
+        margin-top: 40px; padding: 8px 0;
+        a {
+          text-decoration: none;
+          margin: 0 8px;
+        }
       }
     }
+    .features {
+      display: flex; flex-direction: row; justify-content: space-between;
+      margin-top: 40px; padding-top: 20px;
+      .feature {
+        flex-grow: 1; flex-basis: 30%; max-width: 30%;
+        h2 {
+          margin: 20px 0;
+          font-size: 1.4rem; line-height: 1.25; font-weight: 500;
+          border-bottom: none; padding-bottom: 0;
+          color: #3a5169;
+        }
+        p {
+          color: #4e6e8e;
+          line-height: 1.7;
+        }
+      }
+    }
+
   }
 }
 
-
 aside {
   display: none;
-  position: fixed;
-  top: 64px;
-  left: 0;
-  height: 100%;
-  width: 150px;
+  position: fixed; top: 64px; left: 0;
+  height: 100%; width: 150px;
   padding: 16px;
   background: lightblue;
   h2 {
@@ -113,7 +147,6 @@ aside {
     }
   }
 }
-
 
 @media (max-width: 576px) {
   aside.mobile-show-aside {
