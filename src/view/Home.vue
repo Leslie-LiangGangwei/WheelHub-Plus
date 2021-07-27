@@ -20,7 +20,7 @@
     </aside>
     <div class="banner">
       <img class="banner-title" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
-      <p class="home-banner-content">WheelHub-Plus，基于 Vue 3 开发的前端 UI 框架</p>
+      <p class="home-banner-content">WheelHub-Plus，基于 Vue 3.0 开发的前端 UI 框架</p>
       <div class="actions">
         <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">
           <Button level="main">GitHub</Button>
@@ -29,6 +29,11 @@
           <Button level="primary">开始</Button>
         </router-link>
       </div>
+    </div>
+    <div class="features">
+
+      <div class="feature"></div>
+      <div class="feature"></div>
     </div>
   </div>
 </template>
@@ -62,24 +67,24 @@ export default {
 $black-color: #252525;
 
 .top {
+  display: flex; justify-content: center; align-items: center;
   background: linear-gradient(130deg, rgba(243, 249, 254, 1) 0%, rgba(239, 247, 252, 1) 100%);
   .banner {
-    padding-top: 120px;
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    max-width: 960px;
+    padding-top: 130px;
     padding-bottom: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     .banner-title {
       width: 500px;
+      margin: 0 32px;
     }
     .home-banner-content {
-      margin-top: 40px;
+      margin-top: 24px;
       font-weight: lighter;
       color: $black-color;
     }
     .actions {
-      margin-top: 24px;
+      margin-top: 40px;
       padding: 8px 0;
       a {
         text-decoration: none;

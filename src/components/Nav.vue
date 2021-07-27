@@ -1,7 +1,15 @@
 <template>
   <div class="nav">
-    <span class="toggleAside" @click.stop="toggleMenu"></span>
-    <img class="nav-logo" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
+    <div class="logo">
+      <div class="toggleAside" @click.stop="toggleMenu">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-liebiao"></use>
+        </svg>
+      </div>
+      <router-link to="/">
+        <img class="nav-logo" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
+      </router-link>
+    </div>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
@@ -14,6 +22,7 @@
 </template>
 
 <script lang="ts">
+import '../assets/icon/iconfont.js'
 import {inject, ref} from "vue";
 
 export default {
@@ -41,18 +50,22 @@ $blue: #2973f5;
   justify-content: center; align-items: center;
   padding: 24px;
   height: 64px;
+  .logo {
+    margin-right: auto;
+  }
   .toggleAside {
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    background: red;
     display: none;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
   .nav-logo {
-    max-width: 8em;
+    max-width: 9em;
     margin-right: auto;
   }
   .menu {
