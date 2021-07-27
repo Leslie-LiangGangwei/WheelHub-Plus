@@ -3,7 +3,7 @@
     <div class="logo">
       <div class="toggleAside" @click.stop="toggleMenu">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-liebiao"></use>
+          <use xlink:href="#icon-menu"></use>
         </svg>
       </div>
       <router-link to="/">

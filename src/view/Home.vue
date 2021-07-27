@@ -31,7 +31,6 @@
       </div>
     </div>
     <div class="features">
-
       <div class="feature"></div>
       <div class="feature"></div>
     </div>
