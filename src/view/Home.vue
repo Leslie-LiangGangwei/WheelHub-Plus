@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Nav></Nav>
+    <Nav :class="{'nav-show': windowScroll}"></Nav>
     <aside :class="{'mobile-show-aside': menuVisible}" ref="aside">
       <h2>组件列表</h2>
       <ol>
@@ -67,22 +67,31 @@ export default {
       }
       menuVisible.value = false
     }
+    const windowScroll = ref<Boolean>()
+    const handleScroll = () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
+      windowScroll.value = scrollTop > 0;
+    }
     nextTick(() => {
       document.addEventListener('click', eventMenu)
+      document.addEventListener('scroll', handleScroll)
     })
-    return {menuVisible, aside}
+    return {menuVisible, aside, windowScroll}
   }
 }
 </script>
 
 <style scoped lang="scss">
-
 .home {
   position: relative;
+  .nav-show {
+    background: hsla(0, 0%, 100%, .4);
+    backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 -3px 0 0 #cdcde6, 0 0 2px 2px #fff,0 3px 6px 3px rgba(30,35,90,.1);
+  }
   .home-banner {
     z-index: 1;
-    position: absolute;
-    top: 0; left: 0;
+    position: absolute; top: 0; left: 0;
     width: 100%; height: 466px;
     margin: 0 auto;
     background: linear-gradient(130deg, rgba(243, 249, 254, 1) 0%, rgba(239, 247, 252, 1) 100%);
@@ -123,7 +132,7 @@ export default {
     }
     .features {
       display: flex; flex-direction: row; justify-content: space-between;
-      margin-top: 40px; padding-top: 20px;
+      margin: 40px 0; padding-top: 20px;
       @media (max-width: 576px) {
         display: flex; flex-direction: column;
         padding-top: 0;

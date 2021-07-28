@@ -48,12 +48,10 @@ $black-color: #252525;
 $blue: #2973f5;
 
 .nav {
-  z-index: 10;
-  position: fixed;
-  top: 0; left: 0;
+  z-index: 20;
+  position: fixed; top: 0; left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center; align-items: center;
+  display: flex; justify-content: center; align-items: center;
   padding: 24px;
   height: 64px;
   .logo {
