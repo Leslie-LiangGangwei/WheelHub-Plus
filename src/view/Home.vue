@@ -39,7 +39,7 @@
         </div>
         <div class="feature">
           <h2>基于 TypeScript</h2>
-          <p>TypeScript 是 JavaScript 的超集，这意味着他支持所有的 JavaScript 语法。并在此之上对 JavaScript 添加了一些扩展。</p>
+          <p>TypeScript 是 JavaScript 的超集，这意味着他支持所有的 JavaScript 语法，并在此之上添加了一些扩展。</p>
         </div>
         <div class="feature">
           <h2>代码易读</h2>
@@ -84,7 +84,11 @@ export default {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 466px;
+    margin: 0 auto;
     background: linear-gradient(130deg, rgba(243, 249, 254, 1) 0%, rgba(239, 247, 252, 1) 100%);
+    @media (max-width: 576px) {
+      height: 396px;
+    }
   }
   .main {
     max-width: 960px;
@@ -92,10 +96,16 @@ export default {
     .banner {
       display: flex; justify-content: center; align-items: center; flex-direction: column;
       padding-top: 130px; padding-bottom: 80px;
+      @media (max-width: 576px) {
+        padding-top: 80px; padding-bottom: 60px;
+      }
       .banner-title {
         z-index: 10;
         max-width: 500px;
         margin: 0 32px;
+        @media (max-width: 576px) {
+          width: 100%;
+        }
       }
       .home-banner-content {
         z-index: 10;
@@ -114,13 +124,23 @@ export default {
     .features {
       display: flex; flex-direction: row; justify-content: space-between;
       margin-top: 40px; padding-top: 20px;
+      @media (max-width: 576px) {
+        display: flex; flex-direction: column;
+        padding-top: 0;
+      }
       .feature {
         flex-grow: 1; flex-basis: 30%; max-width: 30%;
+        @media (max-width: 576px) {
+          max-width: 100%; padding: 0 2.5rem;
+        }
         h2 {
           margin: 20px 0;
           font-size: 1.4rem; line-height: 1.25; font-weight: 500;
           border-bottom: none; padding-bottom: 0;
           color: #3a5169;
+          @media (max-width: 576px) {
+            padding-top: 24px;
+          }
         }
         p {
           color: #4e6e8e;
@@ -128,29 +148,26 @@ export default {
         }
       }
     }
-
   }
-}
-
-aside {
-  display: none;
-  position: fixed; top: 64px; left: 0;
-  height: 100%; width: 150px;
-  padding: 16px;
-  background: lightblue;
-  h2 {
-    margin-bottom: 4px;
-  }
-  ol {
-    li {
-      padding: 4px 0;
+  aside {
+    display: none;
+    position: fixed; top: 64px; left: 0;
+    height: 100%; width: 150px;
+    padding: 16px;
+    background: lightblue;
+    h2 {
+      margin-bottom: 4px;
     }
-  }
-}
-
-@media (max-width: 576px) {
-  aside.mobile-show-aside {
-    display: inline-block;
+    ol {
+      li {
+        padding: 4px 0;
+      }
+    }
+    @media (max-width: 576px) {
+      aside.mobile-show-aside {
+        display: inline-block;
+      }
+    }
   }
 }
 </style>

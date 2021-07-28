@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="logo">
-      <div class="toggleAside" @click.stop="toggleMenu">
+      <div class="toggleAside" @click.stop="toggleMenu" v-if="toggleMenuButtonVisible">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-menu"></use>
         </svg>
@@ -27,6 +27,12 @@ import {inject, ref} from "vue";
 
 export default {
   name: "Nav",
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup() {
     const menuVisible = inject<ref<boolean>>('menuVisible') // get
     const toggleMenu = () => {

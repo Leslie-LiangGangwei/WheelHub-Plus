@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Nav class="nav"></Nav>
+    <Nav class="nav" :toggleMenuButtonVisible="true"></Nav>
     <div class="doc-content">
       <aside :class="{'mobile-show-aside': menuVisible}" ref="aside">
         <h2>组件列表</h2>
