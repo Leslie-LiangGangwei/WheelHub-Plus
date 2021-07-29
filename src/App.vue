@@ -10,9 +10,12 @@ export default {
   name: 'App',
   setup() {
     const menuVisible = ref(false);
+    const bgVisible = ref<boolean>(false)
     provide('menuVisible', menuVisible) // set
+    provide('bgVisible', bgVisible)
     router.afterEach(()=>{
       menuVisible.value = false
+      bgVisible.value = false
     })
   }
 }

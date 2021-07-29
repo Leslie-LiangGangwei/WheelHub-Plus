@@ -5,6 +5,9 @@ import Button from './components/ButtonDoc.vue'
 import Dialog from './components/DialogDoc.vue'
 import Tabs from './components/TabsDoc.vue'
 import Default from './components/DefaultDoc.vue'
+import Intro from './components/Intro.vue'
+import Install from './components/Install.vue'
+import GetStarted from './components/GetStarted.vue'
 import {createWebHashHistory, createRouter} from 'vue-router'
 
 
@@ -21,6 +24,9 @@ export const router = createRouter({
                 {path: "button", component: Button},
                 {path: "dialog", component: Dialog},
                 {path: "tabs", component: Tabs},
+                {path: "intro", component: Intro},
+                {path: "install", component: Install},
+                {path: "getStarted", component: GetStarted},
             ],
         },
     ]

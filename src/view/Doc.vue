@@ -6,6 +6,18 @@
     ></Nav>
     <div class="doc-content">
       <aside :class="{'mobile-show-aside': menuVisible}" ref="aside">
+        <h2>文档</h2>
+        <ol>
+          <li>
+            <router-link to="/doc/Intro">介绍</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/Install">安装</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/GetStarted">开始使用</router-link>
+          </li>
+        </ol>
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -22,6 +34,7 @@
           </li>
         </ol>
       </aside>
+      <div :class="{'background-blur': bgVisible}"></div>
       <main>
         <router-view></router-view>
       </main>
@@ -38,28 +51,27 @@ export default {
   components: {Nav},
   setup: function () {
     const menuVisible = inject<ref<boolean>>('menuVisible')
+    const bgVisible = inject<ref<boolean>>('bgVisible')
     const aside = ref(null);
     const eventMenu = (event) => {
       if (event.target == aside.value || aside.value.contains(event.target)) {
         return
       }
       menuVisible.value = false
+      bgVisible.value = false
     }
-    const windowScroll = ref<Boolean>()
-    const handleScroll = () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
-      windowScroll.value = scrollTop > 0;
-    }
+    const windowScroll = ref<Boolean>(true)
     nextTick(() => {
       document.addEventListener('click', eventMenu)
-      document.addEventListener('scroll', handleScroll)
     })
-    return {menuVisible, aside, windowScroll}
+    return {menuVisible, aside, windowScroll, bgVisible}
   }
 }
 </script>
 
 <style scoped lang="scss">
+$blue: #2973f5;
+
 .layout {
   display: flex; flex-direction: column;
   height: 100vh;
@@ -69,23 +81,34 @@ export default {
     box-shadow: 0 -3px 0 0 #cdcde6, 0 0 2px 2px #fff, 0 3px 6px 3px rgba(30, 35, 90, .1);
   }
   .doc-content {
+    position: relative;
     display: flex; flex-grow: 1;
-    padding-top: 64px; padding-left: 158px;
+    padding-top: 64px; padding-left: 240px;
     @media (max-width: 576px) {
       padding-left: 0;
     }
     main {
       flex-grow: 1;
-      padding: 16px;
+      padding: 32px 40px;
       background: white;
+    }
+    .background-blur {
+      position: fixed; top: 64px; left: 0;
+      display: none;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, .6);
+      @media (max-width: 576px) {
+        display: block;
+      }
     }
     aside {
       z-index: 10;
       display: inline-block;
       position: fixed; top: 64px; left: 0;
-      height: 100%; width: 150px;
-      padding: 16px;
-      background: lightblue;
+      height: 100%; width: 240px;
+      padding-top: 24px;
+      background: white;
+      border-right: 1px solid #eaecef;
       @media (max-width: 576px) {
         display: none;
         &.mobile-show-aside {
@@ -93,11 +116,20 @@ export default {
         }
       }
       h2 {
-        margin-bottom: 4px;
+        font-size: 18px; font-weight: 700;
+        padding: 6px 24px;
       }
       ol {
         li {
-          padding: 4px 0;
+          font-weight: 400;
+          padding: 6px 36px;
+          a {
+            color: #2c3e50;
+            text-decoration: none;
+            &:hover {
+              color: $blue;
+            }
+          }
         }
       }
     }

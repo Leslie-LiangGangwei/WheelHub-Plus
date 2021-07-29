@@ -35,8 +35,10 @@ export default {
   },
   setup() {
     const menuVisible = inject<ref<boolean>>('menuVisible') // get
+    const bgVisible = inject<ref<boolean>>('bgVisible')
     const toggleMenu = () => {
       menuVisible.value = !menuVisible.value
+      bgVisible.value = !bgVisible.value
     }
     return {toggleMenu}
   }
