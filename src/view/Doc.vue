@@ -121,13 +121,17 @@ $blue: #2973f5;
       }
       ol {
         li {
-          font-weight: 400;
-          padding: 6px 36px;
           a {
-            color: #2c3e50;
+            display: block;
+            padding: 6px 36px; border-left: 4px solid white;
+            color: #2c3e50; font-weight: 400;
             text-decoration: none;
             &:hover {
               color: $blue;
+            }
+            &.router-link-active {
+              border-color: $blue;
+              color: $blue !important;
             }
           }
         }
