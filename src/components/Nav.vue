@@ -22,7 +22,6 @@
 </template>
 
 <script lang="ts">
-import '../assets/icon/iconfont.js'
 import {inject, ref} from "vue";
 
 export default {
