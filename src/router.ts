@@ -26,7 +26,7 @@ export const router = createRouter({
                 {path: "tabs", component: Tabs},
                 {path: "intro", component: Intro},
                 {path: "install", component: Install},
-                {path: "getStarted", component: GetStarted},
+                {path: "get-started", component: GetStarted},
             ],
         },
     ]
