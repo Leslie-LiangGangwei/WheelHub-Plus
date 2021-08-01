@@ -44,7 +44,6 @@ export default {
       return defaults.find(tag => tag.props.title === props.selected)
     })
     const selectItem = ref<HTMLDivElement>(null)
-
     const container = ref<HTMLDivElement>(null)
     const indicator = ref<HTMLDivElement>(null)
     onMounted(() => {
