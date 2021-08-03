@@ -9,7 +9,7 @@
       <p>最简单的用法。</p>
       <div class="demo-container">
         <div class="demo-component">
-          <Switch v-model:value="switchValue"/>
+          <SwitchNormal></SwitchNormal>
         </div>
         <div class="demo-code">
           <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
@@ -21,15 +21,13 @@
 </template>
 
 <script lang="ts">
-import Switch from "../lib/Switch.vue"
-import {ref} from "vue"
+import SwitchNormal from '../components/SwitchDemo/SwitchNormal.vue'
 
 export default {
   name: "SwitchDoc",
-  components: {Switch},
+  components: {SwitchNormal},
   setup() {
-    const switchValue = ref(true)
-    return {switchValue}
+    return {}
   }
 }
 </script>
