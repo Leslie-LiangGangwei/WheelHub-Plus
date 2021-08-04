@@ -12,7 +12,7 @@
     </div>
     <ul class="menu">
       <li>
-        <router-link to="/doc">文档</router-link>
+        <router-link to="/doc/intro">文档</router-link>
       </li>
       <li>
         <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">GitHub</a>

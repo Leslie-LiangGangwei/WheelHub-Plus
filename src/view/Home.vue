@@ -27,7 +27,7 @@
           <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">
             <Button level="main">GitHub</Button>
           </a>
-          <router-link to="/doc">
+          <router-link to="/doc/intro">
             <Button level="primary">开始</Button>
           </router-link>
         </div>
