@@ -10,7 +10,6 @@ export default {
             const {path} = options
             const file = fs.readFileSync(path).toString()
             const parsed = baseParse(file).children.find(n => n.tag === 'demo')
-            console.log('parsed:' + parsed)
             const title = parsed.children[0].content
             const main = file.split(parsed.loc.source).join('').trim()
             return `export default function (Component) {
