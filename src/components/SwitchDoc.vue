@@ -9,7 +9,7 @@
       <p>最简单的用法。</p>
       <div class="demo-container">
         <div class="demo-component">
-          <SwitchNormal></SwitchNormal>
+          <component :is="SwitchNormal"></component>
         </div>
         <div class="demo-code">
           <pre>{{ SwitchNormal.__sourceCode }}</pre>
@@ -21,7 +21,7 @@
       <p>最简单的用法。</p>
       <div class="demo-container">
         <div class="demo-component">
-          <SwitchDisabled></SwitchDisabled>
+          <component :is="SwitchDisabled"></component>
         </div>
         <div class="demo-code">
           <pre>{{ SwitchDisabled.__sourceCode }}</pre>
@@ -38,7 +38,6 @@ import SwitchDisabled from '../components/SwitchDemo/SwitchDisabled.vue'
 
 export default {
   name: "SwitchDoc",
-  components: {SwitchNormal, SwitchDisabled},
   setup() {
     return {SwitchNormal, SwitchDisabled}
   }
