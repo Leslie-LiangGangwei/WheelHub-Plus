@@ -12,7 +12,19 @@
           <SwitchNormal></SwitchNormal>
         </div>
         <div class="demo-code">
-          <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
+          <pre>{{ SwitchNormal.__sourceCode }}</pre>
+        </div>
+      </div>
+    </div>
+    <div class="demo">
+      <p class="title">禁止用法</p>
+      <p>最简单的用法。</p>
+      <div class="demo-container">
+        <div class="demo-component">
+          <SwitchDisabled></SwitchDisabled>
+        </div>
+        <div class="demo-code">
+          <pre>{{ SwitchDisabled.__sourceCode }}</pre>
         </div>
       </div>
     </div>
@@ -22,12 +34,13 @@
 
 <script lang="ts">
 import SwitchNormal from '../components/SwitchDemo/SwitchNormal.vue'
+import SwitchDisabled from '../components/SwitchDemo/SwitchDisabled.vue'
 
 export default {
   name: "SwitchDoc",
-  components: {SwitchNormal},
+  components: {SwitchNormal, SwitchDisabled},
   setup() {
-    return {}
+    return {SwitchNormal, SwitchDisabled}
   }
 }
 </script>
@@ -47,7 +60,7 @@ $border-color: #efeff4;
       padding: 42px 24px 50px;
     }
     .demo-code {
-      padding: 8px 16px;
+      padding: 16px;
       border-top: 1px dashed $border-color;
       pre {
         line-height: 1.1;

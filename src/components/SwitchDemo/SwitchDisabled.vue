@@ -1,7 +1,8 @@
-<demo>基础用法</demo>
+<demo>禁止用法</demo>
 
 <template>
-  <Switch v-model:value="switchFalse"/>
+  <Switch v-model:value="switchTrue" disabled/>
+  <Switch v-model:value="switchFalse" disabled/>
 </template>
 
 <script lang="ts">
@@ -13,7 +14,8 @@ export default {
   components: {Switch},
   setup() {
     const switchFalse = ref(false)
-    return {switchFalse}
+    const switchTrue = ref(true)
+    return {switchFalse, switchTrue}
   }
 }
 </script>
