@@ -12,7 +12,8 @@
           <component :is="SwitchNormal"></component>
         </div>
         <div class="demo-code">
-          <pre>{{ SwitchNormal.__sourceCode }}</pre>
+          <pre class="language-html"
+               v-html="Prism.highlight(SwitchNormal.__sourceCode, Prism.languages.html, 'html')" />
         </div>
       </div>
     </div>
@@ -24,7 +25,8 @@
           <component :is="SwitchDisabled"></component>
         </div>
         <div class="demo-code">
-          <pre>{{ SwitchDisabled.__sourceCode }}</pre>
+          <pre class="language-html"
+               v-html="Prism.highlight(SwitchDisabled.__sourceCode, Prism.languages.html, 'html')" />
         </div>
       </div>
     </div>
@@ -35,11 +37,14 @@
 <script lang="ts">
 import SwitchNormal from '../components/SwitchDemo/SwitchNormal.vue'
 import SwitchDisabled from '../components/SwitchDemo/SwitchDisabled.vue'
+import 'prismjs';
+import 'prismjs/themes/prism.css'
+const Prism = (window as any).Prism
 
 export default {
   name: "SwitchDoc",
   setup() {
-    return {SwitchNormal, SwitchDisabled}
+    return {SwitchNormal, SwitchDisabled, Prism}
   }
 }
 </script>
@@ -61,11 +66,6 @@ $border-color: #efeff4;
     .demo-code {
       padding: 16px;
       border-top: 1px dashed $border-color;
-      pre {
-        line-height: 1.1;
-        font-family: Consolas, 'Courier New', Courier, monospace;
-        margin: 0;
-      }
     }
   }
 }
