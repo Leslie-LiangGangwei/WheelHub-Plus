@@ -34,23 +34,23 @@ $h2: $h - 4px;
 .g-switch {
   position: relative;
   height: $h; width: $h*2;
+  margin-right: 20px;
   background: #bfbfbf;
   border-radius: $h/2;
-  border: none;
-  outline: none;
+  border: none; outline: none;
   &.g-switchStatus {background: #1890ff;}
   &.g-switchStatus span {left: calc(100% - #{$h2} - 2px);}
   &:active .g-switch-span {width: $h2 + 4px;}
   &.g-switchStatus:active .g-switch-span {width: $h2 + 4px; margin-left: -4px;}
   &:disabled {opacity: 0.4; cursor: not-allowed;}
-
+  &-span {
+    position: absolute;top: 2px;left: 2px;
+    height: $h2;width: $h2;
+    background: white;
+    border-radius: $h2 / 2;
+    transition: all 250ms;
+  }
 }
 
-.g-switch-span {
-  position: absolute;top: 2px;left: 2px;
-  height: $h2;width: $h2;
-  background: white;
-  border-radius: $h2 / 2;
-  transition: all 250ms;
-}
+
 </style>
