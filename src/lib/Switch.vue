@@ -1,5 +1,8 @@
 <template>
-  <button :class="{'g-switchStatus': value}" @click="toggleSwitch" class="g-switch">
+  <button :class="{'g-switchStatus': value}"
+          :disabled="disabled"
+          @click="toggleSwitch"
+          class="g-switch">
     <span class="g-switch-span"></span>
   </button>
 </template>
@@ -10,7 +13,11 @@ import './g.scss'
 export default {
   name: "Switch",
   props: {
-    value: [Boolean, String]
+    value: [Boolean, String],
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   setup(props, context) {
     const toggleSwitch = () => {
@@ -35,6 +42,8 @@ $h2: $h - 4px;
   &.g-switchStatus span {left: calc(100% - #{$h2} - 2px);}
   &:active .g-switch-span {width: $h2 + 4px;}
   &.g-switchStatus:active .g-switch-span {width: $h2 + 4px; margin-left: -4px;}
+  &:disabled {opacity: 0.4; cursor: not-allowed;}
+
 }
 
 .g-switch-span {
