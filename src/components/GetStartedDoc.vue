@@ -12,7 +12,6 @@
     <p>代码示例：</p>
     <pre class="language-html"
          v-html="Prism.highlight(ButtonNormalDemo.__sourceCode, Prism.languages.html, 'html')"/>
-
   </article>
 </template>
 

@@ -1,4 +1,4 @@
-<demo>按钮</demo>
+<demo>普通按钮</demo>
 
 <template>
   <div>
