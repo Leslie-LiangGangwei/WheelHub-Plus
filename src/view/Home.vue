@@ -84,6 +84,7 @@ export default {
 <style scoped lang="scss">
 .home {
   position: relative;
+  overflow: auto;
   .nav-show {
     background: hsla(0, 0%, 100%, .4);
     backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);

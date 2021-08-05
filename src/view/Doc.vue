@@ -91,6 +91,7 @@ $blue: #2973f5;
       flex-grow: 1;
       padding: 32px 40px;
       background: white;
+      overflow: auto;
     }
     .background-blur {
       position: fixed; top: 64px; left: 0;
