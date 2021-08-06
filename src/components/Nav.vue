@@ -7,7 +7,7 @@
         </svg>
       </div>
       <router-link to="/">
-        <img class="nav-logo" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
+        <img class="nav-logo" src="../assets/WheelHub-Plus.svg" alt="WheelHub-Plus">
       </router-link>
     </div>
     <ul class="menu">

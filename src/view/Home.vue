@@ -21,7 +21,7 @@
     <div class="home-banner"></div>
     <div class="main">
       <div class="banner">
-        <img class="banner-title" src="src/assets/WheelHub-Plus@3x.svg" alt="WheelHub-Plus">
+        <img class="banner-title" src="../assets/WheelHub-Plus.svg" alt="WheelHub-Plus">
         <p class="home-banner-content">WheelHub-Plus 是一款基于 Vue 3.0 和 TypeScript 的 UI 组件库。</p>
         <div class="actions">
           <a href="https://github.com/Leslie-LiangGangwei/WheelHub-Plus">
