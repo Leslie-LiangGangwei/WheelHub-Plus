@@ -4,7 +4,7 @@ cd dist &&
 git init &&
 git add . &&
 git commit -m "update dist" &&
-git checkout -M dist &&
+git checkout -b dist &&
 git remote add origin git@github.com:Leslie-LiangGangwei/WheelHub-Plus.git &&
 git push -f -u origin dist &&
 cd -
