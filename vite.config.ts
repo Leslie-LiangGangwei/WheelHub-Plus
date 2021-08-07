@@ -4,6 +4,8 @@ import {baseParse} from '@vue/compiler-core'
 
 export default {
     vueCustomBlockTransforms: {
+        base: './',
+        assetsDir: 'assets',
         demo: (options) => {
             const {path} = options
             const file = fs.readFileSync(path).toString()
