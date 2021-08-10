@@ -6,11 +6,11 @@
     </blockquote>
     <Demo :component="SwitchNormal">
       <template v-slot:title>基础用法</template>
-      <template v-slot:details>最简单的用法。</template>
+      <template v-slot:details>绑定 <code>v-model:value</code> 到一个 <code>Boolean</code> 类型的变量。</template>
     </Demo>
     <Demo :component="SwitchDisabled">
       <template v-slot:title>禁止用法</template>
-      <template v-slot:details>Switch 失效状态。</template>
+      <template v-slot:details>通过 <code>disabled</code> 属性指定是否禁用 Switch 组件。</template>
     </Demo>
     <Table>
       <TableTbody :td-array="['v-model:value','绑定值（必填），绑定值为 true 或 false','Boolean','---','---']"></TableTbody>

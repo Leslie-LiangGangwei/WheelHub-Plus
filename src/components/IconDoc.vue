@@ -10,7 +10,7 @@
          v-html="Prism.highlight(importText, Prism.languages.js, 'js')"/>
     <Demo :component="IconDemo">
       <template v-slot:title>基础用法</template>
-      <template v-slot:details>默认提供了基础样式。</template>
+      <template v-slot:details>提供了基础样式。</template>
     </Demo>
     <Demo :component="IconDemoExtend">
       <template v-slot:title>扩展用法</template>
