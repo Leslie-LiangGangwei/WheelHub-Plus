@@ -13,7 +13,7 @@
       <template v-slot:details>Switch 失效状态。</template>
     </Demo>
     <Table>
-      <TableTbody :td-array="['v-model:value','绑定值（必选），绑定值为 true 或 false','Boolean','---','---']"></TableTbody>
+      <TableTbody :td-array="['v-model:value','绑定值（必填），绑定值为 true 或 false','Boolean','---','---']"></TableTbody>
       <TableTbody :td-array="['disabled','是否禁用','Boolean','---','false']"></TableTbody>
     </Table>
   </article>

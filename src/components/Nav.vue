@@ -2,9 +2,7 @@
   <div class="nav">
     <div class="logo">
       <div class="toggleAside" @click.stop="toggleMenu" v-if="toggleMenuButtonVisible">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-menu"></use>
-        </svg>
+        <Icon name="menu"></Icon>
       </div>
       <router-link to="/">
         <img class="nav-logo" src="../assets/WheelHub-Plus.svg" alt="WheelHub-Plus">
@@ -23,9 +21,11 @@
 
 <script lang="ts">
 import {inject, ref} from "vue";
+import Icon from "../lib/Icon.vue"
 
 export default {
   name: "Nav",
+  components: {Icon},
   props: {
     toggleMenuButtonVisible: {
       type: Boolean,
@@ -64,7 +64,7 @@ $blue: #2973f5;
     top: 50%;
     transform: translateY(-50%);
     display: none;
-    svg {
+    .g-icon {
       width: 20px;
       height: 20px;
     }

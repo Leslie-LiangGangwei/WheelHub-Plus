@@ -21,6 +21,9 @@
         <h2>组件列表</h2>
         <ol>
           <li>
+            <router-link to="/doc/icon">Icon 图标</router-link>
+          </li>
+          <li>
             <router-link to="/doc/switch">Switch 开关</router-link>
           </li>
           <li>
