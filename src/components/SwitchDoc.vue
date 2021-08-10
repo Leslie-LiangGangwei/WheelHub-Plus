@@ -12,17 +12,23 @@
       <template v-slot:title>禁止用法</template>
       <template v-slot:details>Switch 失效状态。</template>
     </Demo>
+    <Table>
+      <TableTbody :td-array="['v-model:value','绑定值（必选），绑定值为 true 或 false','Boolean','---','---']"></TableTbody>
+      <TableTbody :td-array="['disabled','是否禁用','Boolean','---','false']"></TableTbody>
+    </Table>
   </article>
 </template>
 
 <script lang="ts">
-import Demo from '../components/Demo.vue'
-import SwitchNormal from '../components/SwitchDemo/SwitchNormal.vue'
-import SwitchDisabled from '../components/SwitchDemo/SwitchDisabled.vue'
+import Demo from './DocComponent/Demo.vue'
+import Table from './DocComponent/Table.vue'
+import TableTbody from  './DocComponent/TableTbody.vue'
+import SwitchNormal from './DemoComponent/SwitchDemo/SwitchNormal.vue'
+import SwitchDisabled from './DemoComponent/SwitchDemo/SwitchDisabled.vue'
 
 export default {
   name: "SwitchDoc",
-  components: {Demo},
+  components: {Demo, Table, TableTbody},
   setup() {
     return {SwitchNormal, SwitchDisabled}
   }
