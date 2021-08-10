@@ -7,8 +7,8 @@
 
 <script lang="ts">
 import {ref} from 'vue'
-import Tabs from '../lib/Tabs.vue'
-import TabsItem from '../lib/TabsItem.vue'
+import Tabs from '../lib/Tab/Tabs.vue'
+import TabsItem from '../lib/Tab/TabsItem.vue'
 
 export default {
   name: "TabsDoc",
