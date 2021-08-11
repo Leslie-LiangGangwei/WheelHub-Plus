@@ -5,6 +5,7 @@ import GetStartedDoc from './components/GetStartedDoc.vue'
 import IntroDoc from './components/IntroDoc.vue'
 import SwitchDoc from './components/SwitchDoc.vue'
 import IconDoc from './components/IconDoc.vue'
+import InputDoc from './components/InputDoc.vue'
 import ButtonDoc from './components/ButtonDoc.vue'
 import DialogDoc from './components/DialogDoc.vue'
 import TabsDoc from './components/TabsDoc.vue'
@@ -22,6 +23,7 @@ export const router = createRouter({
                 {path: "", redirect: "/doc/intro"},
                 {path: "icon", component: IconDoc},
                 {path: "switch", component: SwitchDoc},
+                {path: "input", component: InputDoc},
                 {path: "button", component: ButtonDoc},
                 {path: "dialog", component: DialogDoc},
                 {path: "tabs", component: TabsDoc},
