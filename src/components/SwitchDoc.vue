@@ -6,7 +6,7 @@
     </blockquote>
     <Demo :component="SwitchNormal">
       <template v-slot:title>基础用法</template>
-      <template v-slot:details>绑定 <code>v-model:value</code> 到一个 <code>Boolean</code> 类型的变量。</template>
+      <template v-slot:details>通过 <code>v-model:value</code> 绑定到一个 <code>Boolean</code> 类型的变量，设置 Switch 组件初始状态（开 / 关）。</template>
     </Demo>
     <Demo :component="SwitchDisabled">
       <template v-slot:title>禁止用法</template>
