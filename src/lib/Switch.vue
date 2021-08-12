@@ -34,7 +34,6 @@ $h2: $h - 4px;
 .g-switch {
   position: relative;
   height: $h; width: $h*2;
-  margin-right: 20px;
   background: #bfbfbf;
   border-radius: $h/2;
   border: none; outline: none;

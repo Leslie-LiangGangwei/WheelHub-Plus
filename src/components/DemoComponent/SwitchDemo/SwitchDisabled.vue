@@ -19,3 +19,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.g-switch:first-child {margin-right: 20px;}
+</style>
