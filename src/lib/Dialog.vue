@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import './g.scss'
-import Button from '../lib/Button.vue'
+import Button from './Button/Button.vue'
 
 export default {
   name: "Dialog",

@@ -15,6 +15,7 @@
 </template>
 
 <script lang="ts">
+import './g.scss'
 import Icon from '../../src/lib/Icon.vue'
 
 export default {

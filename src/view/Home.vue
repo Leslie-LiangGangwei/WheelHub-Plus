@@ -52,7 +52,7 @@
 
 <script lang="ts">
 import Nav from "../components/Nav.vue"
-import Button from "../lib/Button.vue"
+import Button from "../lib/Button/Button.vue"
 import {inject, nextTick, ref} from "vue";
 
 export default {

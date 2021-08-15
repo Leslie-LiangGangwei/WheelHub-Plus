@@ -19,7 +19,7 @@
 import 'prismjs';
 import 'prismjs/themes/prism.css'
 import {ref} from "vue";
-import ButtonNormalDemo from './DemoComponent/ButtonDemo/ButtonNormalDemo.vue'
+import ButtonNormalDemo from './DemoComponent/ButtonDemo/ButtonNormal.vue'
 
 const Prism = (window as any).Prism
 export default {
