@@ -5,7 +5,11 @@
 <script lang="ts">
 export default {
   name: "TabsItem",
-  inheritAttrs: false
+  inheritAttrs: false,
+  disabled: {
+    type: Boolean,
+    default: false
+  }
 }
 </script>
 
