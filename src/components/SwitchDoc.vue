@@ -2,7 +2,7 @@
   <article class="markdown-body">
     <h1>Switch 开关</h1>
     <blockquote>
-      <p>开关选择器，可切换"开"和"关"两种状态</p>
+      <p>开关选择器，可切换"开"和"关"两种状态。</p>
     </blockquote>
     <Demo :component="SwitchNormal">
       <template v-slot:title>基础用法</template>
