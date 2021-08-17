@@ -1,5 +1,6 @@
 <template>
-  <p class="title">Attributes</p>
+  <p class="title" v-if="isTitle">Attributes</p>
+  <slot name="subhead"></slot>
   <table>
     <thead>
     <tr>
@@ -17,7 +18,13 @@
 <script lang="ts">
 
 export default {
-  name: "Table"
+  name: "Table",
+  props: {
+    isTitle : {
+      type: Boolean,
+      default: true
+    }
+  }
 }
 </script>
 
