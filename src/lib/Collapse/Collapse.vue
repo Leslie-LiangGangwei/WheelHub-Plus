@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import {getCurrentInstance, onMounted} from "vue";
-import EventBus from '../../EventBus.ts'
+import {getCurrentInstance, onMounted, provide} from "vue";
+import mitt from "mitt";
 
 export default {
   name: "Collapse",
@@ -23,6 +23,8 @@ export default {
     }
   },
   setup(props, context) {
+    const EventBus = mitt()
+    provide('EventBus', EventBus)
     const {proxy} = getCurrentInstance();
     let selectedCopy = JSON.parse(JSON.stringify(props.selected))
     onMounted(() => {
@@ -37,7 +39,6 @@ export default {
       } else {
         selectedCopy.push(value)
       }
-
       // @ts-ignore
       EventBus.emit('update:selected', selectedCopy)
       context.emit('update:selected', selectedCopy)
@@ -51,7 +52,6 @@ export default {
       EventBus.emit('update:selected', selectedCopy)
       context.emit('update:selected', selectedCopy)
     })
-    return {}
   }
 }
 </script>

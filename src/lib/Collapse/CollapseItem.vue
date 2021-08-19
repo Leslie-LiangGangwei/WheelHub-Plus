@@ -12,8 +12,7 @@
 
 <script lang="ts">
 import Icon from '../../lib/Icon.vue'
-import {ref, getCurrentInstance} from "vue";
-import EventBus from '../../EventBus.ts'
+import {ref, inject} from "vue";
 
 export default {
   name: "CollapseItem",
@@ -26,7 +25,7 @@ export default {
   },
   setup(props) {
     const showed = ref(false)
-    const {proxy} = getCurrentInstance()
+    const EventBus = inject("EventBus");
 
     // @ts-ignore
     EventBus.on('update:selected', selected => {
