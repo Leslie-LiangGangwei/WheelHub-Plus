@@ -10,6 +10,7 @@ import ButtonDoc from './components/ButtonDoc.vue'
 import LayoutDoc from './components/LayoutDoc.vue'
 import DialogDoc from './components/DialogDoc.vue'
 import TabsDoc from './components/TabsDoc.vue'
+import CollapseDoc from './components/CollapseDoc.vue'
 import {createWebHashHistory, createRouter} from 'vue-router'
 
 const history = createWebHashHistory()
@@ -32,6 +33,7 @@ export const router = createRouter({
                 {path: "layout", component: LayoutDoc},
                 {path: "dialog", component: DialogDoc},
                 {path: "tabs", component: TabsDoc},
+                {path: "collapse", component: CollapseDoc},
             ],
         },
     ]
