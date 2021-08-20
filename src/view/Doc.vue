@@ -95,7 +95,7 @@ $blue: #2973f5;
   .doc-content {
     position: relative;
     display: flex; flex-grow: 1;
-    padding-top: 64px; padding-left: 240px;
+    padding-top: 64px; padding-left: 320px;
     @media (max-width: 576px) {
       padding-left: 0;
     }
@@ -119,7 +119,7 @@ $blue: #2973f5;
       z-index: 10;
       display: inline-block;
       position: fixed; top: 64px; left: 0;
-      height: 100%; width: 240px;
+      height: 100%; width: 320px;
       padding-top: 24px;
       background: white;
       border-right: 1px solid #eaecef;

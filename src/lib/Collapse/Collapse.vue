@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import {getCurrentInstance, onMounted, provide} from "vue";
+import {onMounted, provide} from "vue";
 import mitt from "mitt";
 
 export default {
@@ -25,7 +25,6 @@ export default {
   setup(props, context) {
     const EventBus = mitt()
     provide('EventBus', EventBus)
-    const {proxy} = getCurrentInstance();
     let selectedCopy = JSON.parse(JSON.stringify(props.selected))
     onMounted(() => {
       // @ts-ignore

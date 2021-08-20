@@ -10,7 +10,7 @@
     </Demo>
     <Demo :component="CollapseSingle">
       <template v-slot:title>手风琴</template>
-      <template v-slot:details>手风琴，每次只打开一个 <code>CollapseItem</code>。</template>
+      <template v-slot:details>手风琴模式，每次只打开一个 <code>CollapseItem</code>。</template>
     </Demo>
     <Table>
       <template v-slot:subhead>

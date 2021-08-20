@@ -28,8 +28,8 @@ export default {
   name: "DialogDoc",
   components: {Button, Dialog},
   setup() {
-    const dialogStatus = ref(false)
-    const onClickOverlay = ref(false)
+    const dialogStatus = ref<Boolean>(false)
+    const onClickOverlay = ref<Boolean>(false)
     const okFunction = () => {}
     const cancelFunction = () => {}
     const toggle = () => {
