@@ -63,7 +63,6 @@ $blue: #2973f5;
     border: 1px solid $border-color;
     margin: 16px 0 32px;
     .demo-component {
-      display: flex; align-items: center;
       overflow: auto;
       padding: 42px 24px 50px;
     }
