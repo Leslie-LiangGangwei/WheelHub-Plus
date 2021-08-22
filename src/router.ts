@@ -8,6 +8,7 @@ import IconDoc from './components/IconDoc.vue'
 import InputDoc from './components/InputDoc.vue'
 import ButtonDoc from './components/ButtonDoc.vue'
 import LayoutDoc from './components/LayoutDoc.vue'
+import GridDoc from './components/GridDoc.vue'
 import DialogDoc from './components/DialogDoc.vue'
 import TabsDoc from './components/TabsDoc.vue'
 import CollapseDoc from './components/CollapseDoc.vue'
@@ -30,6 +31,7 @@ export const router = createRouter({
                 {path: "switch", component: SwitchDoc},
                 {path: "input", component: InputDoc},
                 {path: "button", component: ButtonDoc},
+                {path: "grid", component: GridDoc},
                 {path: "layout", component: LayoutDoc},
                 {path: "dialog", component: DialogDoc},
                 {path: "tabs", component: TabsDoc},

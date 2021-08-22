@@ -36,6 +36,9 @@
             <router-link to="/doc/layout">Layout 布局</router-link>
           </li>
           <li>
+            <router-link to="/doc/grid">Grid 栅格</router-link>
+          </li>
+          <li>
             <router-link to="/doc/dialog">Dialog 对话窗</router-link>
           </li>
           <li>
