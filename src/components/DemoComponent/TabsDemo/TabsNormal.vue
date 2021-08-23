@@ -17,7 +17,7 @@ export default {
   name: "TabsNormal",
   components: {Tabs, TabsItem},
   setup() {
-    const itemSelected = 'Title 1'
+    const itemSelected = ref('Title 1')
     return {itemSelected}
   }
 }
