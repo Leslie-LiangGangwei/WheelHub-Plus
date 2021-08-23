@@ -22,8 +22,8 @@
 </template>
 
 <script lang="ts">
-import './g.scss'
-import Button from './Button/Button.vue'
+import '../g.scss'
+import Button from '../Button/Button.vue'
 
 export default {
   name: "Dialog",
@@ -79,20 +79,17 @@ $border-color: #d9d9d9;
   min-width: 15em;
   max-width: 90%;
   &-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    z-index: 21;
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
     background: fade_out(black, 0.5);
-    z-index: 10;
   }
   &-wrapper {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 11;
+    z-index: 31;
   }
   header {
     display: flex; align-items: center; justify-content: space-between;
