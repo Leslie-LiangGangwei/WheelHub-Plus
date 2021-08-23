@@ -14,7 +14,7 @@
         <p>你的内容应当放置于 <code>col</code> 内，并且，只有 <code>col</code> 可以作为 <code>row</code> 的直接元素。</p>
       </li>
       <li>
-        <p>栅格系统中的列是指 1 到 24 的值来表示其跨越的范围。例如，三个等宽的列可以使用 <code><</code><code> Col span={8} /></code> 来创建。</p>
+        <p>栅格系统中的列是指 1 到 24 的值来表示其跨越的范围。例如，三个等宽的列可以使用 <code>&lt; Col span={8} &gt;</code> 来创建。</p>
       </li>
     </ul>
     <Demo :component="GridNormal">
