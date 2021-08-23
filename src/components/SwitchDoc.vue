@@ -13,7 +13,7 @@
       <template v-slot:details>通过 <code>disabled</code> 属性指定是否禁用 Switch 组件。</template>
     </Demo>
     <Table>
-      <TableTbody :td-array="['v-model:value','绑定值（必填），绑定值为 true 或 false','Boolean','---','---']"></TableTbody>
+      <TableTbody :td-array="['v-model:value','绑定值（必填）为是否开启 Switch','Boolean','---','---']"></TableTbody>
       <TableTbody :td-array="['disabled','是否禁用','Boolean','---','false']"></TableTbody>
     </Table>
   </article>

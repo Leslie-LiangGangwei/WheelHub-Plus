@@ -20,7 +20,7 @@
       <template v-slot:subhead>
         <p style="font-size: 20px">Tabs</p>
       </template>
-      <TableTbody :td-array="['v-model:selected','绑定值（必填），绑定值为选中选项卡的 title','String','---','---']"></TableTbody>
+      <TableTbody :td-array="['v-model:selected','绑定值（必填）为选中选项卡的 title','String','---','---']"></TableTbody>
       <TableTbody :td-array="['tab-position','横向 / 垂直布局','String','top / left','top']"></TableTbody>
     </Table>
     <Table :is-title="false">
