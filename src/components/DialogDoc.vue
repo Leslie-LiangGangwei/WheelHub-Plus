@@ -5,8 +5,14 @@
       <p>模态对话框。</p>
     </blockquote>
     <p class="title">何时使用</p>
-    <p>需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 <code>Dialog</code> 在当前页面正中打开一个浮层，承载相应的操作。</p>
-    <p>另外当需要一个简洁的确认框询问用户时，可以使用 <code>openDialog</code> 语法糖方法。</p>
+    <ul>
+      <li>
+        <p>需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 <code>Dialog</code> 在当前页面正中打开一个浮层，承载相应的操作。</p>
+      </li>
+      <li>
+        <p>另外当需要一个简洁的确认框询问用户时，可以使用 <code>openDialog</code> 语法糖方法。</p>
+      </li>
+    </ul>
     <Demo :component="DialogNormal">
       <template v-slot:title>基本用法</template>
       <template v-slot:details>点击按钮，展示 <code>Dialog</code> 对话框</template>
@@ -59,5 +65,9 @@ export default {
 .subhead {
   font-size: 20px;
   padding-top: 20px;
+}
+
+li {
+  list-style: circle;
 }
 </style>

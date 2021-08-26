@@ -1,22 +1,22 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-    <div class="g-dialog-overlay" @click="overlayClose"></div>
-    <div class="g-dialog-wrapper">
-      <div class="g-dialog">
-        <header>
-          <slot name="title"></slot>
-          <span class="g-dialog-close" @click="closeDialog"></span>
-        </header>
-        <main>
-          <slot name="content"></slot>
-        </main>
-        <footer>
-          <Button level="main" @click="ok">yes</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+      <div class="g-dialog-overlay" @click="overlayClose"></div>
+      <div class="g-dialog-wrapper">
+        <div class="g-dialog">
+          <header>
+            <slot name="title"></slot>
+            <span class="g-dialog-close" @click="closeDialog"></span>
+          </header>
+          <main>
+            <slot name="content"></slot>
+          </main>
+          <footer>
+            <Button level="main" @click="ok">yes</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
     </Teleport>
   </template>
 </template>
