@@ -48,7 +48,7 @@ export default {
 
 <style scoped lang="scss">
 $font-size: 16px;
-$background: #e9e9eb;
+$background: #f4f4f5;
 $grey: #ddd;
 $border-radius: 4px;
 .g-collapse-item {
