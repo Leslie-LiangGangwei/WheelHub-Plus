@@ -39,6 +39,9 @@
             <router-link to="/doc/grid">Grid 栅格</router-link>
           </li>
           <li>
+            <router-link to="/doc/toast">Toast 全局提示</router-link>
+          </li>
+          <li>
             <router-link to="/doc/dialog">Dialog 对话窗</router-link>
           </li>
           <li>
@@ -119,11 +122,11 @@ $blue: #2973f5;
       }
     }
     aside {
-      z-index: 10;
+      z-index: 10; overflow-y: scroll; overflow-x: hidden;
+      position: fixed; top: 0; bottom: 0; left: 0;
       display: inline-block;
-      position: fixed; top: 64px; left: 0;
-      height: 100%; width: 320px;
-      padding-top: 24px;
+      margin-top: 64px; padding-top: 24px;
+      width: 320px;
       background: white;
       border-right: 1px solid #eaecef;
       @media (max-width: 576px) {
