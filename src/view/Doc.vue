@@ -45,6 +45,9 @@
             <router-link to="/doc/dialog">Dialog 对话窗</router-link>
           </li>
           <li>
+            <router-link to="/doc/popover">Popover 气泡卡片</router-link>
+          </li>
+          <li>
             <router-link to="/doc/tabs">Tabs 标签栏</router-link>
           </li>
           <li>

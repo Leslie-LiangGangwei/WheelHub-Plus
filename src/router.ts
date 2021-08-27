@@ -11,6 +11,7 @@ import LayoutDoc from './components/LayoutDoc.vue'
 import GridDoc from './components/GridDoc.vue'
 import DialogDoc from './components/DialogDoc.vue'
 import ToastDoc from './components/ToastDoc.vue'
+import PopoverDoc from './components/PopoverDoc.vue'
 import TabsDoc from './components/TabsDoc.vue'
 import CollapseDoc from './components/CollapseDoc.vue'
 import {createWebHashHistory, createRouter} from 'vue-router'
@@ -36,6 +37,7 @@ export const router = createRouter({
                 {path: "layout", component: LayoutDoc},
                 {path: "dialog", component: DialogDoc},
                 {path: "toast", component: ToastDoc},
+                {path: "popover", component: PopoverDoc},
                 {path: "tabs", component: TabsDoc},
                 {path: "collapse", component: CollapseDoc},
             ],
