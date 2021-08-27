@@ -34,7 +34,6 @@
       <TableTbody :td-array="['type','主题','String','success / warning / normal / error','normal']"></TableTbody>
       <TableTbody :td-array="['autoClose','是否自动关闭 / 几秒后自动关闭','Boolean, Number','---','3']"></TableTbody>
       <TableTbody :td-array="['showClose','是否显示关闭按钮','Boolean','---','false']"></TableTbody>
-
     </Table>
   </article>
 </template>
