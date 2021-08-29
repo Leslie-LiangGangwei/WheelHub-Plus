@@ -15,7 +15,7 @@
     </ul>
     <Demo :component="DialogNormal">
       <template v-slot:title>基本用法</template>
-      <template v-slot:details>点击按钮，展示 <code>Dialog</code> 对话框</template>
+      <template v-slot:details>点击按钮，展示 <code>Dialog</code> 对话框。</template>
     </Demo>
     <Demo :component="DialogPlugin">
       <template v-slot:title>语发糖用法</template>
@@ -25,7 +25,7 @@
       <template v-slot:subhead>
         <p style="font-size: 20px">Dialog</p>
       </template>
-      <TableTbody :td-array="['v-model:visible','绑定值为是否显示 Dialog','Boolean','---','---']"></TableTbody>
+      <TableTbody :td-array="['v-model:visible','绑定值，决定是否显示 Dialog','Boolean','---','---']"></TableTbody>
       <TableTbody :td-array="['onClickOverlay','点击背景是否隐藏 Dialog','Boolean','---','true']"></TableTbody>
       <TableTbody :td-array="['ok','绑定点击 yes 按钮执行方法','Function','---','---']"></TableTbody>
       <TableTbody :td-array="['cancel','绑定点击 Cancel 按钮执行方法','Function','---','---']"></TableTbody>

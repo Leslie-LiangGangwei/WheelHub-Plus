@@ -2,12 +2,11 @@
   <article class="markdown-body">
     <h1>开始使用</h1>
     <blockquote>
-      <p>请先<a href="#/doc/install">安装</a>本组件库，然后引入 WheelHub-Plus 组件库，注意修改组件路径</p>
+      <p>请先<a href="#/doc/install">安装</a>本组件库，然后引入 WheelHub-Plus 组件库，<mark>注意修改组件路径</mark>。</p>
     </blockquote>
     <p class="title">引用组件库</p>
     <pre class="language-js"
          v-html="Prism.highlight(importText, Prism.languages.js, 'js')"/>
-    <p>就可以使用我提供的组件了。</p>
     <p class="title">使用 Button 组件</p>
     <p>代码示例：</p>
     <pre class="language-html"

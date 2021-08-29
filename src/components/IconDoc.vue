@@ -5,7 +5,7 @@
       <p>推荐使用 <a href="https://www.iconfont.cn/">iconfont</a> SVG 即提高性能，又方便维护。</p>
     </blockquote>
     <p class="title">引用</p>
-    <p>在 <a href="https://www.iconfont.cn/">iconfont</a> 生成并下载（项目文件）iconfont.js 后，并且在 main.ts 内引用</p>
+    <p>在 <a href="https://www.iconfont.cn/">iconfont</a> 生成并下载（项目文件）iconfont.js 后，并且在 main.ts 内引用。</p>
     <pre class="language-js"
          v-html="Prism.highlight(importText, Prism.languages.js, 'js')"/>
     <Demo :component="IconDemo">
@@ -14,10 +14,10 @@
     </Demo>
     <Demo :component="IconDemoExtend">
       <template v-slot:title>扩展用法</template>
-      <template v-slot:details>开发者可根据需求，对 Icon 进行“宽高”、“颜色”、“动画”等样式进行扩展。</template>
+      <template v-slot:details>开发者可根据需求，对 <code>Icon</code> “<strong>动画</strong>”、“<strong>宽高</strong>”、“<strong>颜色</strong>”等样式进行扩展。</template>
     </Demo>
     <Table>
-      <TableTbody :td-array="['name','Icon 名称（必填），对应 iconfont 的 Icon 名称','String','---','---']"></TableTbody>
+      <TableTbody :td-array="['name','icon 名称（必填），对应 iconfont 项目内 icon','String','---','---']"></TableTbody>
     </Table>
   </article>
 </template>

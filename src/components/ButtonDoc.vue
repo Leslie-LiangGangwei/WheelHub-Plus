@@ -10,23 +10,23 @@
     </Demo>
     <Demo :component="ButtonIcon">
       <template v-slot:title>图标按钮</template>
-      <template v-slot:details><code>icon</code> 属性可添加图标，<code>icon-position</code> 属性可设置图标定位。</template>
+      <template v-slot:details>按钮可添加图标 icon，<code>icon-position</code> 属性可设置图标定位。</template>
     </Demo>
     <Demo :component="ButtonTheme">
       <template v-slot:title>不同类型</template>
-      <template v-slot:details>通过 <code>theme</code> 属性可设置<strong>不同类型</strong>按钮。</template>
+      <template v-slot:details>通过 <code>theme</code> 属性，可设置<strong>不同类型</strong>按钮。</template>
     </Demo>
     <Demo :component="ButtonSize">
       <template v-slot:title>不同尺寸</template>
-      <template v-slot:details>通过 <code>size</code> 属性可设置<strong>不同尺寸</strong>按钮。</template>
+      <template v-slot:details>通过 <code>size</code> 属性，可设置<strong>不同尺寸</strong>按钮。</template>
     </Demo>
     <Demo :component="ButtonLevel">
       <template v-slot:title>不同优先级</template>
-      <template v-slot:details>通过 <code>level</code> 属性可设置<strong>不同优先级</strong>按钮。</template>
+      <template v-slot:details>通过 <code>level</code> 属性，可设置<strong>不同优先级</strong>按钮。</template>
     </Demo>
     <Demo :component="ButtonDisabled">
       <template v-slot:title>禁用状态</template>
-      <template v-slot:details>通过 <code>disabled</code> 属性可设置按钮<strong>是否禁用</strong>。</template>
+      <template v-slot:details>通过 <code>disabled</code> 属性，可设置按钮<strong>是否禁用</strong>。</template>
     </Demo>
     <Demo :component="ButtonSubmit">
       <template v-slot:title>加载中</template>
@@ -37,7 +37,7 @@
       <template v-slot:details>以按钮组的方式出现，常用于多项类似操作。</template>
     </Demo>
     <Table>
-      <TableTbody :td-array="['icon','图标类名','String','---','---']"></TableTbody>
+      <TableTbody :td-array="['icon','icon 名称，对应 iconfont 项目内 icon','String','---','---']"></TableTbody>
       <TableTbody :td-array="['iconPosition','图标定位','String','left / right','left']"></TableTbody>
       <TableTbody :td-array="['theme','类型','String','normal / text / link','normal']"></TableTbody>
       <TableTbody :td-array="['size','尺寸','String','small / normal / big','normal']"></TableTbody>

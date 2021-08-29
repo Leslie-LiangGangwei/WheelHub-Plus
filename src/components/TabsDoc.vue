@@ -10,24 +10,24 @@
     </Demo>
     <Demo :component="TabsDisabled">
       <template v-slot:title>禁用</template>
-      <template v-slot:details>通过 <code>disabled</code> 属性可禁用某一项。</template>
+      <template v-slot:details>通过 <code>disabled</code> 属性，可禁用某一项。</template>
     </Demo>
     <Demo :component="TabPosition">
       <template v-slot:title>垂直布局</template>
-      <template v-slot:details>通过 <code>tab-position</code> 属性可设置<strong>横向</strong> / <strong>垂直</strong>布局。</template>
+      <template v-slot:details>通过 <code>tab-position</code> 属性，可设置<strong>横向</strong> / <strong>垂直</strong>布局。</template>
     </Demo>
     <Table>
       <template v-slot:subhead>
         <p style="font-size: 20px">Tabs</p>
       </template>
-      <TableTbody :td-array="['v-model:selected','绑定值（必填）为选中选项卡的 title','String','---','---']"></TableTbody>
+      <TableTbody :td-array="['v-model:selected','绑定值（必填），选中对应 title 的 TabsItem','String','---','---']"></TableTbody>
       <TableTbody :td-array="['tab-position','横向 / 垂直布局','String','top / left','top']"></TableTbody>
     </Table>
     <Table :is-title="false">
       <template v-slot:subhead>
         <p class="subhead">TabsItem</p>
       </template>
-      <TableTbody :td-array="['title','与选项卡绑定值 selected 对应的标识符，表示选项卡别名','String','---','---']"></TableTbody>
+      <TableTbody :td-array="['title','TabsItem 标题（必填），与 Tabs 的绑定值 selected 对应的标识符','String','---','---']"></TableTbody>
       <TableTbody :td-array="['disabled','是否禁用','Boolean','---','false']"></TableTbody>
     </Table>
   </article>

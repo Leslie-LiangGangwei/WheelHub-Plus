@@ -2,7 +2,7 @@
   <article class="markdown-body">
     <h1>Input 输入框</h1>
     <blockquote>
-      <p>通过鼠标或键盘输入字符</p>
+      <p>通过鼠标或键盘输入字符。</p>
     </blockquote>
     <Demo :component="InputNormal">
       <template v-slot:title>基础用法</template>
@@ -10,15 +10,15 @@
     </Demo>
     <Demo :component="InputPassword">
       <template v-slot:title>密码框</template>
-      <template v-slot:details>使用 <code>type="password"</code> 属性即可得到一个可隐藏内容的密码框。</template>
+      <template v-slot:details>使用 <code>type="password"</code> 属性，即可得到一个"隐藏输入内容"的密码框。</template>
     </Demo>
     <Demo :component="InputDisabled">
       <template v-slot:title>禁用状态</template>
-      <template v-slot:details>通过 <code>disabled</code> 属性指定是否禁用 Input 组件。</template>
+      <template v-slot:details>通过 <code>disabled</code> 属性，指定是否禁用 Input 组件。</template>
     </Demo>
     <Demo :component="InputReadonly">
       <template v-slot:title>可读状态</template>
-      <template v-slot:details>通过 <code>readonly</code> 属性指定 Input 组件状态是否可读。</template>
+      <template v-slot:details>通过 <code>readonly</code> 属性，指定 Input 组件是否可读。</template>
     </Demo>
     <Demo :component="InputError">
       <template v-slot:title>错误状态</template>
@@ -34,7 +34,7 @@
       <TableTbody :td-array="['placeholder','占位符	','String','---','请输入内容']"></TableTbody>
       <TableTbody :td-array="['disabled','是否禁用','Boolean','---','false']"></TableTbody>
       <TableTbody :td-array="['readonly','是否可读','Boolean','---','false']"></TableTbody>
-      <TableTbody :td-array="['error','是否错误提示','String','---','false']"></TableTbody>
+      <TableTbody :td-array="['error','是否错误提示','String','---','---']"></TableTbody>
     </Table>
   </article>
 </template>

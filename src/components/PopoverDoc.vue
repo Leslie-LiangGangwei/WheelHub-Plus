@@ -6,24 +6,24 @@
     </blockquote>
     <Demo :component="PopoverNormal">
       <template v-slot:title>Hover 触发</template>
-      <template v-slot:details>通过鼠标移入、聚集，弹出气泡式的卡片浮层。</template>
+      <template v-slot:details>通过<strong>鼠标移入</strong>、<strong>聚集</strong>，弹出气泡式的卡片浮层。</template>
     </Demo>
     <Demo :component="PopoverClick">
       <template v-slot:title>Click 触发</template>
-      <template v-slot:details>通过鼠标点击，弹出气泡式的卡片浮层。</template>
+      <template v-slot:details>通过<strong>鼠标点击</strong>，弹出气泡式的卡片浮层。</template>
     </Demo>
     <Table>
       <template v-slot:subhead>
         <p style="font-size: 20px">Popover</p>
       </template>
-      <TableTbody :td-array="['trigger','触发方式','String','click / hover','hover']"></TableTbody>
+      <TableTbody :td-array="['trigger','触发方式','String','hover / click','hover']"></TableTbody>
       <TableTbody :td-array="['position','定位','String','top / bottom / left / right','top']"></TableTbody>
     </Table>
     <Table :is-title="false">
       <template v-slot:subhead>
         <p class="subhead">Slot</p>
       </template>
-      <TableTbody :td-array="['---（default）','触发 Popover 元素 / 组件（已绑定 click & mouseenter、mouseleave 事件）','---','---','---']"></TableTbody>
+      <TableTbody :td-array="['---（default）','触发 Popover 元素 / 组件（默认绑定 click & mouseenter、mouseleave 事件）','---','---','---']"></TableTbody>
       <TableTbody :td-array="['content','Popover 显示的内容','---','---','---']"></TableTbody>
     </Table>
   </article>

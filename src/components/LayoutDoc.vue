@@ -2,7 +2,7 @@
   <article class="markdown-body">
     <h1>Layout 布局</h1>
     <blockquote>
-      <p>协助进行页面级整体布局。</p>
+      <p>协助进行页面整体布局。</p>
     </blockquote>
     <p class="title">设计建议</p>
     <ul>
@@ -13,10 +13,10 @@
         <p>顶部导航（展示类页面）：一级导航高度 <code>80px</code>，二级导航 <code>56px</code></p>
       </li>
       <li>
-        <p>顶部导航高度的范围计算公式为：<code>48+8n</code></p>
+        <p>顶部导航高度的范围计算公式为：<code>48 + 8n</code></p>
       </li>
       <li>
-        <p>侧边导航宽度的范围计算公式：<code>200+8n</code></p>
+        <p>侧边导航宽度的范围计算公式：<code>200 + 8n</code></p>
       </li>
     </ul>
     <p class="title">组件概述</p>

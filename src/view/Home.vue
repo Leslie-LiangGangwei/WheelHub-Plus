@@ -35,15 +35,15 @@
       <div class="features">
         <div class="feature">
           <h2>基于 Vue 3.0</h2>
-          <p>使用了 Vue 3.0 Composition API 所开发的前端 UI 框架，项目仅供学习参考（请勿在生产环境中使用）</p>
+          <p>使用了 Vue 3.0 Composition API 所开发的前端 UI 组件库，项目仅供学习参考（请勿在生产环境中使用）。</p>
         </div>
         <div class="feature">
           <h2>基于 TypeScript</h2>
-          <p>TypeScript 是 JavaScript 的超集，这意味着他支持所有的 JavaScript 语法，并在此之上添加了一些扩展。</p>
+          <p>TypeScript 是 JavaScript 的超集，这意味着他支持所有的 JavaScript 语法，并且还添加了一些扩展。</p>
         </div>
         <div class="feature">
           <h2>代码易读</h2>
-          <p>每个组件的源代码都极其简洁，清晰易懂。自带说明的代码，即使没有注释，你也能看懂</p>
+          <p>每个组件的源代码都极其简洁，遵循语义化命名，即使没有任何注释也能让使用者清晰易懂。</p>
         </div>
       </div>
     </div>

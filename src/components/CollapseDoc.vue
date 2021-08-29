@@ -2,7 +2,7 @@
   <article class="markdown-body">
     <h1>Collapse 折叠面板</h1>
     <blockquote>
-      <p>可以折叠/展开的内容区域。</p>
+      <p>可以折叠 / 展开的内容区域。</p>
     </blockquote>
     <Demo :component="CollapseNormal">
       <template v-slot:title>折叠面板</template>
@@ -16,14 +16,14 @@
       <template v-slot:subhead>
         <p style="font-size: 20px">Collapse</p>
       </template>
-      <TableTbody :td-array="['v-model:selected','绑定值为 CollapseItem 中的 title 数组','Array','---','---']"></TableTbody>
+      <TableTbody :td-array="['v-model:selected','绑定值，展示对应 title 的 CollapseItem','Array','---','---']"></TableTbody>
       <TableTbody :td-array="['single','是否手风琴模式','Boolean','---','false']"></TableTbody>
     </Table>
     <Table :is-title="false">
       <template v-slot:subhead>
         <p class="subhead">CollapseItem</p>
       </template>
-      <TableTbody :td-array="['title','CollapseItem 标题（必填）','String','---','---']"></TableTbody>
+      <TableTbody :td-array="['title','CollapseItem 标题（必填），与 Collapse 的绑定值 selected 对应的标识符','String','---','---']"></TableTbody>
     </Table>
   </article>
 </template>

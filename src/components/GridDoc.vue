@@ -23,7 +23,7 @@
     </Demo>
     <Demo :component="GridGutter">
       <template v-slot:title>间隔栅格</template>
-      <template v-slot:details>栅格常常需要和间隔进行配合，你可以使用 <code>Row</code> 的 <code>gutter</code> 属性，我们推荐使用 <code>(16+8n)px</code> 作为栅格间隔(n 是自然数)。
+      <template v-slot:details>栅格常常需要和间隔进行配合，你可以使用 <code>Row</code> 的 <code>gutter</code> 属性，我们推荐使用 <code>(16+8n)px</code> 作为栅格间隔（n 是自然数）。
        <p>如果要支持响应式，可以写成 <code>{ iPhone:'0', iPad:'32', pc:'8' }</code>。</p></template>
     </Demo>
     <Demo :component="GridOffset">
@@ -32,7 +32,7 @@
     </Demo>
     <Demo :component="GridBootstrap">
       <template v-slot:title>响应式布局</template>
-      <template v-slot:details>可设置多个屏幕尺寸，预设五个响应尺寸：<code>iPhone</code> <code>iPad</code> <code>pc</code> <code>widePc</code> <code>biggestWidePc</code></template>
+      <template v-slot:details>可设置多个屏幕尺寸，预设五个响应尺寸：<code>iPhone</code>、<code>iPad</code>、<code>pc</code>、<code>widePc</code>、<code>biggestWidePc</code>。</template>
     </Demo>
     <Table>
       <template v-slot:subhead>
@@ -45,8 +45,8 @@
       <template v-slot:subhead>
         <p class="subhead">Col</p>
       </template>
-      <TableTbody :td-array="['span','栅格占位格数（默认为：iPhone 尺寸 <576px)','String, Number','---','---']"></TableTbody>
-      <TableTbody :td-array="['offset','栅格左侧间隔格数（默认为：iphone 尺寸 <576px)','String, Number','---','---']"></TableTbody>
+      <TableTbody :td-array="['span','栅格占位格数（默认为：iPhone 尺寸 < 576px)','String, Number','---','---']"></TableTbody>
+      <TableTbody :td-array="['offset','栅格左侧间隔格数（默认为：iphone 尺寸 < 576px)','String, Number','---','---']"></TableTbody>
       <TableTbody :td-array="['iPad','屏幕 >= 576px，设置 span 和 offset 的对象','Object','---','---']"></TableTbody>
       <TableTbody :td-array="['pc','屏幕 >= 992px，设置 span 和 offset 的对象','Object','---','---']"></TableTbody>
       <TableTbody :td-array="['widePc','屏幕 >= 1200px，设置 span 和 offset 的对象','Object','---','---']"></TableTbody>

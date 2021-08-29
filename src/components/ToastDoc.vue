@@ -19,11 +19,11 @@
     </Demo>
     <Demo :component="ToastType">
       <template v-slot:title>不同状态</template>
-      <template v-slot:details>用来显示「成功、警告、消息、错误」类的操作反馈。</template>
+      <template v-slot:details>用来显示「<strong>成功</strong>、<strong>警告</strong>、<strong>消息</strong>、<strong>错误</strong>」类的操作反馈。</template>
     </Demo>
     <Demo :component="ToastClose">
       <template v-slot:title>可关闭</template>
-      <template v-slot:details>提示取消自动关闭，需要<strong>手动</strong>关闭</template>
+      <template v-slot:details>取消自动关闭，需要<strong>手动</strong>进行关闭</template>
     </Demo>
     <Demo :component="ToastHTML">
       <template v-slot:title>使用 HTML 片段</template>

@@ -28,7 +28,7 @@ export default {
   components: {Button, Dialog},
   setup() {
     const dialogStatus = ref(false)
-    const isOnClickOverlay = ref(false)
+    const isOnClickOverlay = ref(true)
     const okFunction = () => {}
     const cancelFunction = () => {}
     const toggle = () => {
