@@ -23,6 +23,12 @@ export default {
     }
   },
   setup(props, context) {
+    const defaults = context.slots.default()
+    defaults.forEach((tag) => {
+      if (tag.type.name !== 'CollapseItem') {
+        throw new Error('Collapse 子标签必须为 CollapseItem')
+      }
+    })
     const EventBus = mitt()
     provide('EventBus', EventBus)
     let selectedCopy = JSON.parse(JSON.stringify(props.selected))

@@ -29,7 +29,10 @@ export default {
     selected: {type: String},
     tabPosition: {
       type: String,
-      default: 'top'
+      default: 'top',
+      validator(value) {
+        return ['top', 'left'].indexOf(value) >= 0
+      }
     },
   },
   setup(props, context) {

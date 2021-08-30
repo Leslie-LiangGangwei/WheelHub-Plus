@@ -31,6 +31,7 @@ export default {
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
+
 .g-switch {
   position: relative;
   height: $h; width: $h*2;
@@ -50,6 +51,4 @@ $h2: $h - 4px;
     transition: all 250ms;
   }
 }
-
-
 </style>

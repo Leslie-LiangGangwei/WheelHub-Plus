@@ -21,7 +21,13 @@ export default {
       }
     }
   },
-  setup(props) {
+  setup(props, context) {
+    const defaults = context.slots.default()
+    defaults.forEach((tag) => {
+      if (tag.type.name !== 'Col') {
+        throw new Error('Grid 中所有列 Col 必须放在 Row 内。')
+      }
+    })
     const EventBus = mitt()
     provide('EventBus', EventBus)
     const gutterStyle = (obj) => {

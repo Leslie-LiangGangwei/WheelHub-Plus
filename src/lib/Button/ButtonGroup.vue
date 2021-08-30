@@ -8,7 +8,15 @@
 import '../g.scss'
 
 export default {
-  name: "ButtonGroup"
+  name: "ButtonGroup",
+  setup(props, context){
+    const defaults = context.slots.default()
+    defaults.forEach((tag) => {
+      if (tag.type.name !== 'Button') {
+        throw new Error('ButtonGroup 子标签必须为 Button')
+      }
+    })
+  }
 }
 </script>
 

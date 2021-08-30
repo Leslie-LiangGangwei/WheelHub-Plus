@@ -30,7 +30,10 @@ export default {
     },
     type: {
       type: String,
-      default: 'normal'
+      default: 'normal',
+      validator(value) {
+        return ['normal', 'success', 'warning', 'error'].indexOf(value) >= 0
+      }
     },
     autoClose: {
       type: [Boolean, Number],
@@ -120,8 +123,7 @@ $toast-error-border: #fce2e2;
       margin-right: 16px;
       width: 16px; height: 16px;
       cursor: pointer;
-      &::before,
-      &::after {
+      &::before, &::after {
         content: '';
         position: absolute; top: 50%; left: 50%;
         height: 1px; width: 100%;

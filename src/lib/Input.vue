@@ -25,7 +25,10 @@ export default {
     value: {type: [String, Number]},
     type: {
       type: String,
-      default: 'text'
+      default: 'text',
+      validator(value) {
+        return ['text', 'password', 'textarea'].indexOf(value) >= 0
+      }
     },
     placeholder: {
       type: String,

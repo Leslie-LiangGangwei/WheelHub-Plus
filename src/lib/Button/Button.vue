@@ -23,19 +23,31 @@ export default {
     },
     iconPosition: {
       type: String,
-      default: 'left'
+      default: 'left',
+      validator(value) {
+        return ['left', 'right'].indexOf(value) >= 0
+      }
     },
     theme: {
       type: String,
-      default: 'button'
+      default: 'normal',
+      validator(value) {
+        return ['normal', 'text', 'link'].indexOf(value) >= 0
+      }
     },
     size: {
       type: String,
       default: "normal",
+      validator(value) {
+        return ['small', 'normal', 'big'].indexOf(value) >= 0
+      }
     },
     level: {
       type: String,
-      default: "normal"
+      default: "normal",
+      validator(value) {
+        return ['main', 'primary', 'normal', 'danger'].indexOf(value) >= 0
+      }
     },
     disabled: {
       type: [Boolean, String],

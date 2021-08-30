@@ -110,15 +110,11 @@ $border-color: #d9d9d9;
     display: inline-block;
     width: 16px; height: 16px;
     cursor: pointer;
-    &::before,
-    &::after {
+    &::before, &::after {
       content: '';
-      position: absolute;
-      height: 1px;
+      position: absolute; top: 50%; left: 50%;
+      height: 1px; width: 100%;
       background: black;
-      width: 100%;
-      top: 50%;
-      left: 50%;
     }
     &::before {
       transform: translate(-50%, -50%) rotate(-45deg);
