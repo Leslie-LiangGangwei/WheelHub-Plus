@@ -30,9 +30,9 @@ export default {
     },
     theme: {
       type: String,
-      default: 'normal',
+      default: 'button',
       validator(value) {
-        return ['normal', 'text', 'link'].indexOf(value) >= 0
+        return ['button', 'text', 'link'].indexOf(value) >= 0
       }
     },
     size: {
