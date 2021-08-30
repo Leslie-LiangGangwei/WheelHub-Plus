@@ -39,7 +39,7 @@
     <Table>
       <TableTbody :td-array="['icon','icon 名称，对应 iconfont 项目内 icon','String','---','---']"></TableTbody>
       <TableTbody :td-array="['iconPosition','图标定位','String','left / right','left']"></TableTbody>
-      <TableTbody :td-array="['theme','类型','String','normal / text / link','normal']"></TableTbody>
+      <TableTbody :td-array="['theme','类型','String','button / text / link','button']"></TableTbody>
       <TableTbody :td-array="['size','尺寸','String','small / normal / big','normal']"></TableTbody>
       <TableTbody :td-array="['level', '优先级','String','main / primary / normal / danger', 'normal']"></TableTbody>
       <TableTbody :td-array="['disabled','是否禁用','Boolean','---','false']"></TableTbody>
