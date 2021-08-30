@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="{error: error}">
+  <div class="g-wrapper" :class="{error: error}">
     <input :type="type"
            :placeholder="placeholder"
            :readonly="readonly"
@@ -67,7 +67,7 @@ $color: #252525;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
 $red: #f1453D;
 $placeholder-color: #ccc;
-.wrapper {
+.g-wrapper {
   display: inline-flex; align-items: center; justify-content: center;
   :not(:last-child) {margin-right: .5em}
   input {
