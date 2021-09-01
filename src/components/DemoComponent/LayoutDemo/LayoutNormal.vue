@@ -9,10 +9,8 @@
 </template>
 
 <script lang="ts">
-import Layout from '../../../lib/Layout/Layout.vue'
-import Header from '../../../lib/Layout/Header.vue'
-import Content from '../../../lib/Layout/Content.vue'
-import Footer from '../../../lib/Layout/Footer.vue'
+// @ts-ignore
+import {Layout, Header, Content, Footer} from "wheelhub-plus"
 
 export default {
   name: "LayoutNormal",

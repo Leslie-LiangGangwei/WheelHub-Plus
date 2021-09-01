@@ -9,8 +9,8 @@
 </template>
 
 <script lang="ts">
-import Collapse from '../../../lib/Collapse/Collapse.vue'
-import CollapseItem from '../../../lib/Collapse/CollapseItem.vue'
+// @ts-ignore
+import {Collapse, CollapseItem} from "wheelhub-plus"
 
 export default {
   name: "CollapseSingle",

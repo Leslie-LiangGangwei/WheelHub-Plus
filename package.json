@@ -17,9 +17,10 @@
     "github-markdown-css": "4.0.0",
     "marked": "1.1.1",
     "mitt": "^3.0.0",
-    "prismjs": "1.21.0",
+    "prismjs": "^1.24.1",
     "vue": "3.0.0",
-    "vue-router": "4.0.0-beta.3"
+    "vue-router": "4.0.0-beta.3",
+    "wheelhub-plus": "^1.0.11"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "3.0.0",
@@ -28,6 +29,6 @@
     "rollup-plugin-terser": "7.0.2",
     "rollup-plugin-vue": "6.0.0-beta.10",
     "sass": "1.32.11",
-    "vite": "1.0.0-rc.1"
+    "vite": "^1.0.0-rc.1"
   }
 }

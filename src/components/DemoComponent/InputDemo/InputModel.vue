@@ -6,7 +6,8 @@
 </template>
 
 <script lang="ts">
-import Input from '../../../lib/Input.vue'
+// @ts-ignore
+import {Input} from "wheelhub-plus"
 import {ref} from "vue";
 
 export default {

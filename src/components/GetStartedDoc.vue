@@ -27,7 +27,7 @@ const Prism = (window as any).Prism
 export default {
   name: "GetStartedDoc",
   setup() {
-    const importText = ref('import {Button, Tabs, Switch, Dialog} from "wheelhub-plus"')
+    const importText = ref('import {Icon, Switch, Input, Button, Layout, Header, Content, Footer, Sider, Row, Col, toastPlugin, Dialog, openDialog, Popover, Tabs, TabsItem, Collapse, CollapseItem} from "wheelhub-plus"')
     const importCss = ref('import "wheelhub-plus/dist/lib/wheelhub-plus.css"')
     return {Prism, importText, importCss, ButtonNormalDemo}
   }

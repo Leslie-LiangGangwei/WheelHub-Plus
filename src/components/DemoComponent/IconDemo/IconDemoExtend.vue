@@ -5,7 +5,8 @@
 </template>
 
 <script lang="ts">
-import Icon from '../../../lib/Icon.vue'
+// @ts-ignore
+import {Icon} from "wheelhub-plus"
 
 export default {
   name: "IconDemoExtend",

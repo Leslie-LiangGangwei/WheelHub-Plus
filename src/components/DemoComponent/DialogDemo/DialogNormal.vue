@@ -20,8 +20,8 @@
 
 <script lang="ts">
 import {ref} from "vue";
-import Button from "../../../lib/Button/Button.vue";
-import Dialog from "../../../lib/Dialog/Dialog.vue";
+// @ts-ignore
+import {Button, Dialog} from "wheelhub-plus"
 
 export default {
   name: "DialogNormal",

@@ -6,7 +6,8 @@
 </template>
 
 <script lang="ts">
-import Button from "../../../lib/Button/Button.vue"
+// @ts-ignore
+import {Button} from "wheelhub-plus"
 
 export default {
   name: "ButtonSubmit",

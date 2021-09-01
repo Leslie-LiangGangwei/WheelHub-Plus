@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import Button from "../../../lib/Button/Button.vue"
-import ButtonGroup from "../../../lib/Button/ButtonGroup.vue"
+// @ts-ignore
+import {Button, ButtonGroup} from "wheelhub-plus"
 
 export default {
   name: "ButtonDisabled",

@@ -20,8 +20,8 @@
 </template>
 
 <script lang="ts">
-import Button from '../../../lib/Button/Button.vue'
-import Popover from '../../../lib/Popover.vue'
+// @ts-ignore
+import {Button, Popover} from "wheelhub-plus"
 
 export default {
   name: "PopoverClick",

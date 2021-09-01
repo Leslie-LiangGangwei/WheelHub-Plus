@@ -34,7 +34,7 @@
       </div>
       <div class="features">
         <div class="feature">
-          <h2>基于 Vue 3.0</h2>
+          <h2>Vue 3.0</h2>
           <p>使用了 Vue 3.0 Composition API 所开发的前端 UI 组件库，项目仅供学习参考（请勿在生产环境中使用）。</p>
         </div>
         <div class="feature">

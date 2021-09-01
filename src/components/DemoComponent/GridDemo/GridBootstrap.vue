@@ -10,8 +10,8 @@
 </template>
 
 <script lang="ts">
-import Row from "../../../lib/Grid/Row.vue";
-import Col from "../../../lib/Grid/Col.vue";
+// @ts-ignore
+import {Row, Col} from "wheelhub-plus"
 
 export default {
   name: "GridBootstrap",

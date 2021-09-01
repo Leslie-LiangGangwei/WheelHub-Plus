@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import {toastPlugin} from '../../../lib/Toast/toastPlugin.ts'
-import Button from '../../../lib/Button/Button.vue'
+// @ts-ignore
+import {Button, toastPlugin} from "wheelhub-plus"
 
 export default {
   name: "ToastNormal",

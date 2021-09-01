@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import Button from "../../../lib/Button/Button.vue";
-import {openDialog} from "../../../lib/Dialog/openDialog";
+// @ts-ignore
+import {Button, openDialog} from "wheelhub-plus"
 
 export default {
   name: "DialogPlugin",

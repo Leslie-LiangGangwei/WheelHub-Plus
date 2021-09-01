@@ -5,14 +5,11 @@
 </template>
 
 <script lang="ts">
-import Input from '../../../lib/Input.vue'
+// @ts-ignore
+import {Input} from "wheelhub-plus"
 
 export default {
   name: "InputReadonly",
   components: {Input}
 }
 </script>
-
-<style scoped lang="scss">
-
-</style>

@@ -5,7 +5,8 @@
 </template>
 
 <script lang="ts">
-import Switch from "../../../lib/Switch.vue"
+// @ts-ignore
+import {Switch} from "wheelhub-plus"
 import {ref} from "vue"
 
 export default {

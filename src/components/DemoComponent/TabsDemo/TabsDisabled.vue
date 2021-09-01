@@ -9,8 +9,8 @@
 </template>
 
 <script lang="ts">
-import Tabs from '../../../lib/Tab/Tabs.vue'
-import TabsItem from '../../../lib/Tab/TabsItem.vue'
+// @ts-ignore
+import {Tabs, TabsItem} from "wheelhub-plus"
 import {ref} from "vue";
 
 export default {

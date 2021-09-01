@@ -5,7 +5,7 @@
       <p>推荐使用 <a href="https://www.iconfont.cn/">iconfont</a> SVG 即提高性能，又方便维护。</p>
     </blockquote>
     <p class="title">引用</p>
-    <p>在 <a href="https://www.iconfont.cn/">iconfont</a> 生成并下载（项目文件）iconfont.js 后，并且在 main.ts 内引用。</p>
+    <p>在 <a href="https://www.iconfont.cn/">iconfont</a> 生成并下载（项目文件）iconfont.js 后，并在 main.ts 内引入。</p>
     <pre class="language-js"
          v-html="Prism.highlight(importText, Prism.languages.js, 'js')"/>
     <Demo :component="IconDemo">
