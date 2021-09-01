@@ -5,8 +5,6 @@
 </template>
 
 <script lang="ts">
-import '../g.scss'
-
 export default {
   name: "ButtonGroup",
   setup(props, context){

@@ -9,7 +9,6 @@
 </template>
 
 <script lang="ts">
-import '../g.scss'
 import {computed} from 'vue'
 import Icon from '../Icon.vue'
 
@@ -226,11 +225,11 @@ $font-size: 16px;
     color: lighten($blue, 10%); border-color: lighten($blue, 10%);
   }
   .g-loadingIndicator {
-    width: 1em;
-    height: 1em;
+    width: 12px;
+    height: 12px;
     display: inline-block;
     margin-right: 4px;
-    border-radius: 0.5em;
+    border-radius: 8em;
     border-color: lighten($blue, 10%) lighten($blue, 10%) lighten($blue, 10%) transparent;
     border-style: solid;
     border-width: 2px;
