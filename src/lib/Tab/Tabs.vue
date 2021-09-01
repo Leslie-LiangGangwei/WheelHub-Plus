@@ -55,28 +55,26 @@ export default {
     const container = ref<HTMLDivElement>(null)
     const indicator = ref<HTMLDivElement>(null)
     onMounted(() => {
-          watchEffect(() => {
-            if (props.tabPosition === 'top') {
-              const {width} = selectItem.value.getBoundingClientRect()
-              const {left: selectItemLeft} = selectItem.value.getBoundingClientRect()
-              const {left: containerItemLeft} = container.value.getBoundingClientRect()
-              const left = selectItemLeft - containerItemLeft
-              indicator.value.style.width = width + 'px'
-              indicator.value.style.left = left + 'px'
-            }
-            if (props.tabPosition === 'left') {
-              const {height, width} = selectItem.value.getBoundingClientRect()
-              const {top: selectItemTop} = selectItem.value.getBoundingClientRect()
-              const {top: containerItemTop} = container.value.getBoundingClientRect()
-              const top = selectItemTop - containerItemTop
-              indicator.value.style.height = height + 'px'
-              indicator.value.style.left = width - 2 + 'px'
-              indicator.value.style.top = top + 'px'
-            }
-          })
+      watchEffect(() => {
+        if (props.tabPosition === 'top') {
+          const {width} = selectItem.value.getBoundingClientRect()
+          const {left: selectItemLeft} = selectItem.value.getBoundingClientRect()
+          const {left: containerItemLeft} = container.value.getBoundingClientRect()
+          const left = selectItemLeft - containerItemLeft
+          indicator.value.style.width = width + 'px'
+          indicator.value.style.left = left + 'px'
         }
-    )
-
+        if (props.tabPosition === 'left') {
+          const {height, width} = selectItem.value.getBoundingClientRect()
+          const {top: selectItemTop} = selectItem.value.getBoundingClientRect()
+          const {top: containerItemTop} = container.value.getBoundingClientRect()
+          const top = selectItemTop - containerItemTop
+          indicator.value.style.height = height + 'px'
+          indicator.value.style.left = width - 2 + 'px'
+          indicator.value.style.top = top + 'px'
+        }
+      }, {flush: 'post'})
+    })
     return {defaults, switchItem, tabsContent, selectItem, container, indicator}
   }
 }
