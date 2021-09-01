@@ -19,7 +19,7 @@
           <div class="demo-code-toggle"></div>
           <span class="demo-code-text">隐藏代码</span>
         </div>
-        <div class="demo-code-show" v-else>
+        <div class="demo-code-show" v-if="hideShow">
           <div class="demo-code-toggle"></div>
           <span class="demo-code-text">显示代码</span>
         </div>
@@ -42,10 +42,12 @@ export default {
   },
   setup() {
     const codeShow = ref<Boolean>(false)
+    const hideShow = ref<Boolean>(true)
     const codeToggle = () => {
       codeShow.value = !codeShow.value
+      hideShow.value = !hideShow.value
     }
-    return {Prism, codeShow, codeToggle}
+    return {Prism, codeShow, hideShow, codeToggle}
   }
 }
 </script>
