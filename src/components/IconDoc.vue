@@ -39,7 +39,7 @@ export default {
   name: "IconDoc",
   components: {Demo, Table, TableTbody},
   setup(){
-    const importText = ref("import \'../../src/assets/icon/iconfont.js\'")
+    const importText = ref("import \'../src/assets/icon/iconfont.js\'")
     return {Prism, importText, IconDemo, IconDemoExtend}
   }
 }
