@@ -46,8 +46,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.title {
-  font-size: 22px; font-weight: 400;
-  margin: 55px 0 20px;
+article{
+  .title {
+    font-size: 22px; font-weight: 400;
+    margin: 55px 0 20px;
+  }
+  pre {background: #f9fafc}
 }
 </style>
