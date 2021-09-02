@@ -2417,6 +2417,19 @@ wheelhub-plus@^1.0.11:
     vue "3.0.0"
     vue-router "4.0.0-beta.3"
 
+wheelhub-plus@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/wheelhub-plus/-/wheelhub-plus-1.0.12.tgz#7393ea571914be2e689b6d106fb9029d8eefd551"
+  integrity sha512-0mUckkBfyd3kI+n1J007JTWLiwoxITige/8iT/CnvzuChYWElAPYV94je2OxXUCVSJcHnoZPhCDRE5QzQ7su0g==
+  dependencies:
+    github-markdown-css "4.0.0"
+    marked "1.1.1"
+    mitt "^3.0.0"
+    prismjs "^1.24.1"
+    vue "3.0.0"
+    vue-router "4.0.0-beta.3"
+    wheelhub-plus "^1.0.11"
+
 which@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/which/-/which-2.0.2.tgz#7c6a8dd0a636a0327e10b59c9286eee93f3f51b1"
