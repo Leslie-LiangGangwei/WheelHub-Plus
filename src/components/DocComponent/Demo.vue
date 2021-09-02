@@ -71,7 +71,7 @@ $blue: #2973f5;
     .demo-code {
       border-top: 1px dashed $border-color;
       pre {
-        margin-bottom: 0;
+        margin: 0; background: #f9fafc
       }
     }
     .demo-code-button {
